@@ -1676,7 +1676,7 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN MODELİ HAVA FİLTRESİ
+            // CHEVROLET - CITROEN - DACIA MODELİ HAVA FİLTRESİ
 
             else if(textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
             {
@@ -4165,7 +4165,7 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN YAĞ FİLTRESİ
+            // CHEVROLET - CITROEN - DACIA YAĞ FİLTRESİ
            if(textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
             {
                 string[] metindizi = textBox1.Text.Split(' ');
@@ -6632,7 +6632,7 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN YAKIT FİLTRESİ
+            // CHEVROLET - CITROEN - DACIA YAKIT FİLTRESİ
             else if(textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
             {
                 string[] metindizi = textBox1.Text.Split(' ');
@@ -9911,23 +9911,6 @@ namespace periyodikbakimci
                 else MessageBox.Show("Motor Kodu Girilmedi !!!");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
