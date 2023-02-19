@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "periyodikbakimci", "periyodikbakimci\periyodikbakimci.csproj", "{14076009-72F2-414F-B19F-F40B0E62EDD3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Periyodik Bakimci", "Periyodik Bakimci\Periyodik Bakimci.vdproj", "{3BC3FDA3-FA9F-4433-A0F5-4ECB633353F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14076009-72F2-414F-B19F-F40B0E62EDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14076009-72F2-414F-B19F-F40B0E62EDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14076009-72F2-414F-B19F-F40B0E62EDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14076009-72F2-414F-B19F-F40B0E62EDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC3FDA3-FA9F-4433-A0F5-4ECB633353F4}.Debug|Any CPU.ActiveCfg = Debug
+		{3BC3FDA3-FA9F-4433-A0F5-4ECB633353F4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6D419F0-DFB4-477F-9B5B-15D16AB03E52}
+	EndGlobalSection
+EndGlobal
