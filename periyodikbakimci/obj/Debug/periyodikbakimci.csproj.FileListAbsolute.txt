@@ -1,0 +1,11 @@
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\bin\Debug\periyodikbakimci.exe.config
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\bin\Debug\periyodikbakimci.exe
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\bin\Debug\periyodikbakimci.pdb
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.csproj.AssemblyReference.cache
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.csproj.SuggestedBindingRedirects.cache
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.Form1.resources
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.Properties.Resources.resources
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.csproj.GenerateResource.cache
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.csproj.CoreCompileInputs.cache
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.exe
+C:\Users\mehmet\source\repos\periyodikbakimci\periyodikbakimci\obj\Debug\periyodikbakimci.pdb
