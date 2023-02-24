@@ -192,7 +192,7 @@ namespace periyodikbakimci
 
 
 
-        // ELİMİZDEKİ MARKALAR İÇİN METOD
+        // ELİMİZDEKİ MEVCUT MARKALAR İÇİN METOD
         public static string elimizdekimetod(string textbox3)
         {
             string mevcut = "";
@@ -1245,7 +1245,7 @@ namespace periyodikbakimci
 
 
                             // KWHP
-                            string kwhp = kwhpmetot(metindizi[6]);
+                            string kwhp = kwhpmetot(metindizi[6]);    // metod çağrıldı
 
 
 
@@ -1255,23 +1255,11 @@ namespace periyodikbakimci
 
 
                             // BEYGİR BULMA İŞLEMİ
-                            string ilkbeygir = kwhp;
-                            string sonbeygir = "";
+                            string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
 
-                            for (int i = 0; i <= ilkbeygir.Length - 1; i++)
-                            {
-                                if (ilkbeygir[i] == '-')
-                                {
-                                    for (int j = i + 1; j <= ilkbeygir.Length - 1; j++)
-                                    {
-                                        if (ilkbeygir[j] != 'H')
-                                        {
-                                            sonbeygir += ilkbeygir[j];
-                                        }
-                                        else break;
-                                    }
-                                }
-                            }
+
+
+
                             string kwwhpp = "";
                             for (int i = 1; i <= kwhp.Length - 2; i++)
                             {
@@ -1285,20 +1273,7 @@ namespace periyodikbakimci
 
 
                             // ÜRÜN MARKA BÖLME İŞLEMİ
-                            string aaa = "";
-                            string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
-                            {
-                                if (textBox1.Text[i] != ')')
-                                {
-                                    aaa += textBox1.Text[i];
-                                }
-                                else break;
-                            }
-                            for (int i = aaa.Length - 1; i >= 0; i--)
-                            {
-                                sonmarka += aaa[i];
-                            }
+                            string sonmarka = sonmarkametod(textBox1.Text);    // metod çağrıldı
 
 
 
@@ -1309,37 +1284,7 @@ namespace periyodikbakimci
 
                             // MODEL YILI YAZISI
 
-                            string modelyılı = "";
-
-                            if (arabaninyili.Contains('-'))
-                            {
-                                modelyılı += arabaninyili + " model yılı ve arasında ";
-                            }
-
-                            else if (arabaninyili.EndsWith("→"))
-                            {
-                                string mmm = arabaninyili;
-                                for (int i = 0; i < mmm.Length - 1; i++)
-                                {
-                                    modelyılı += mmm[i];
-                                }
-                                modelyılı += " model yılı ve sonrasında ";
-                            }
-
-                            else if (arabaninyili.StartsWith("→"))
-                            {
-                                string mmm = metindizi[5];
-                                for (int i = 1; i < mmm.Length; i++)
-                                {
-                                    modelyılı += mmm[i];
-                                }
-                                modelyılı += " model yılı ve öncesinde ";
-                            }
-
-                            else
-                            {
-                                modelyılı += arabaninyili + " model yılında ";
-                            }
+                            string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
 
 
 
@@ -1349,33 +1294,7 @@ namespace periyodikbakimci
 
 
                             // MARKA İŞLEMİ
-
-                            string markayazısı = "";
-
-                            if (sonmarka.Contains("Bosch"))
-                            {
-                                markayazısı = "Bosch, dünyanın en büyük otomotiv yedek parça sağlayıcısıdır.";
-                            }
-
-                            else if (sonmarka.Contains("Sardes"))
-                            {
-                                markayazısı = "Sardes,uzun yıllardır yerli üretim yapan üretici firmadır.";
-                            }
-
-                            else if (sonmarka.Contains("Mann"))
-                            {
-                                markayazısı = "Mann, yüksek performanslı, hassas mühendislik ürünleri üreten firmadır.";
-                            }
-
-                            else if (sonmarka.Contains("Filtron"))
-                            {
-                                markayazısı = "Filtron, orijinal ekipman üretimi yapan firma mann+hummel grubunun bünyesinde üretim yapmaktadır.";
-                            }
-
-                            else if (sonmarka.Contains("Kruger"))
-                            {
-                                markayazısı = "Kruger, atak taşıt güvencesiyle Türkiye pazarında kendini kanıtlamış markadır.";
-                            }
+                            string markayazısı = markaciklamametod(textBox1.Text);    // metod çağrıldı
 
 
 
@@ -1385,20 +1304,7 @@ namespace periyodikbakimci
 
                             // MEVCUT MARKA İŞLEMİ
 
-                            string mevcut = "";
-                            string virgul = "";
-                            if (textBox3.Text.Contains(" "))
-                            {
-                                string[] mdizi = textBox3.Text.Split(' ');
-
-                                foreach (var item in mdizi)
-                                {
-                                    mevcut += virgul + item;
-                                    virgul = ", ";
-                                }
-                                mevcut += " marka seçeneklerimiz mevcuttur.";
-                            }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            string mevcut = elimizdekimetod(textBox3.Text);    // metod çağrıldı
 
 
 
@@ -1408,33 +1314,7 @@ namespace periyodikbakimci
 
 
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                            string motoyaz = "";
-                            string virgül = "";
-
-
-                            string motto = textBox2.Text;
-                            int sayac = 0;
-
-                            foreach (var item in motto)
-                            {
-                                if (item == '-')
-                                {
-                                    sayac++;
-                                }
-                            }
-
-                            if (sayac <= 5)
-                            {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
-
-                                foreach (var item in mot)
-                                {
-                                    motoyaz += virgül + item;
-                                    virgül = ", ";
-                                }
-                                motoyaz += " </span> motor kodu ile başlayan,  ";
-                            }
-                            else motoyaz = "";
+                            string motoyaz = motokodmetod(textBox2.Text);    // metod çağrıldı
 
 
 
@@ -1457,454 +1337,9 @@ namespace periyodikbakimci
 
 
                             // UYUMLU MODELLER İŞLEMİ
-                            string amodel = metindizi[5].ToString();
+                            string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
 
-                            string msayac = "";
-                            string myılsayac = "";
 
-                            string sonyil = "";
-
-
-                            string newmetn = metindizi[5];
-                            string bul = "";
-                            for (int i = 1; i < metindizi[5].Length - 2; i++)
-                            {
-                                bul += newmetn[i];
-                            }
-
-
-
-
-                            // OK EĞER SADECE YIL İLE SONRASIYSA VEYA ÖNCESİYSE
-                            string a = metindizi[5];
-                            string sonc = "";
-                            if (a.Length == 5)
-                            {
-                                if (a.StartsWith("→"))
-                                {
-                                    for (int i = 1; i < 5; i++)
-                                    {
-                                        sonc += a[i];
-                                    }
-
-                                    sonyil = " " + sonc + " model yılı ve öncesinde ";
-
-
-                                }
-
-
-                                else if (a.EndsWith("→"))
-                                {
-                                    for (int i = 0; i < 4; i++)
-                                    {
-                                        sonc += a[i];
-                                    }
-
-                                    sonyil = " " + sonc + " model yılı ve sonrasında ";
-                                }
-                            }
-
-
-
-
-
-
-                            else if (amodel.Length == 9)
-                            {
-                                sonyil = amodel + " model yılı ve arasında ";
-                            }
-
-
-
-
-                            // BAŞLIYORSA
-                            else if (amodel.StartsWith("→"))
-                            {
-                                for (int i = 1; i < 3; i++)
-                                {
-                                    msayac += amodel[i];
-                                }
-
-
-                                for (int j = 4; j < 8; j++)
-                                {
-                                    myılsayac += amodel[j];
-                                }
-
-
-
-                                if (msayac == "01")
-                                {
-                                    sonyil = "Ocak " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-                                else if (msayac == "02")
-                                {
-                                    sonyil = "Şubat " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-                                else if (msayac == "03")
-                                {
-                                    sonyil = "Mart " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-                                else if (msayac == "04")
-                                {
-                                    sonyil = "Nisan " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-
-                                else if (msayac == "05")
-                                {
-                                    sonyil = "Mayıs " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-
-                                else if (msayac == "06")
-                                {
-                                    sonyil = "Haziran " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-
-                                else if (msayac == "07")
-                                {
-                                    sonyil = "Şubat " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-
-                                else if (msayac == "07")
-                                {
-                                    sonyil = "Temmuz " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-
-                                else if (msayac == "08")
-                                {
-                                    sonyil = "Ağustos " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-                                else if (msayac == "09")
-                                {
-                                    sonyil = "Eylül " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-
-                                else if (msayac == "10")
-                                {
-                                    sonyil = "Ekim " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-                                else if (msayac == "11")
-                                {
-                                    sonyil = "Kasım " + myılsayac + " model yılı ve öncesinde";
-                                }
-
-
-                                else if (msayac == "12")
-                                {
-                                    sonyil = "Aralık " + myılsayac + " model yılı ve öncesinde";
-                                }
-                            }
-
-
-
-                            // BİTİYORSA
-                            else if (amodel.EndsWith("→"))
-                            {
-
-                                for (int i = 0; i < 2; i++)
-                                {
-                                    msayac += amodel[i];
-                                }
-
-
-                                for (int j = 3; j < 7; j++)
-                                {
-                                    myılsayac += amodel[j];
-                                }
-
-
-
-                                if (msayac == "01")
-                                {
-                                    sonyil = "Ocak " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-                                else if (msayac == "02")
-                                {
-                                    sonyil = "Şubat " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "03")
-                                {
-                                    sonyil = "Mart " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "04")
-                                {
-                                    sonyil = "Nisan " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "05")
-                                {
-
-                                    sonyil = "Mayıs " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "06")
-                                {
-                                    sonyil = "Haziran " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "07")
-                                {
-                                    sonyil = "Temmuz " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "08")
-                                {
-                                    sonyil = "Ağustos " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "09")
-                                {
-                                    sonyil = "Eylül " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-                                else if (msayac == "10")
-                                {
-                                    sonyil = "Ekim " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-
-                                else if (msayac == "11")
-                                {
-                                    sonyil = "Kasım " + myılsayac + " model yılı ve sonrasında ";
-                                }
-
-
-                                else if (msayac == "12")
-                                {
-                                    sonyil = "Aralık " + myılsayac + " model yılı ve sonrasında ";
-                                }
-                            }
-
-
-                            // OK ARASINDAYSA
-                            else if (bul.Contains("→") || bul.Contains("-"))
-                            {
-                                string ikincimsayac = "";
-                                string ikincimyılsayac = "";
-
-                                string sonyılsayac = "";
-
-
-                                // İLK AY
-                                for (int i = 0; i < 2; i++)
-                                {
-                                    msayac += amodel[i];
-                                }
-
-                                // İLK YIL
-                                for (int j = 3; j < 7; j++)
-                                {
-                                    myılsayac += amodel[j];
-                                }
-
-
-                                if (msayac == "01")
-                                {
-                                    sonyılsayac += "Ocak " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "02")
-                                {
-                                    sonyılsayac += "Şubat " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "03")
-                                {
-                                    sonyılsayac += "Mart " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "04")
-                                {
-                                    sonyılsayac += "Nisan " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "05")
-                                {
-                                    sonyılsayac += "Mayıs " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "06")
-                                {
-                                    sonyılsayac += "Haziran " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "07")
-                                {
-                                    sonyılsayac += "Temmuz " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "08")
-                                {
-                                    sonyılsayac += "Ağustos " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "09")
-                                {
-                                    sonyılsayac += "Eylül " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "10")
-                                {
-                                    sonyılsayac += "Ekim " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "11")
-                                {
-                                    sonyılsayac += "Kasım " + myılsayac + " ve ";
-                                }
-
-                                else if (msayac == "12")
-                                {
-                                    sonyılsayac += "Aralık " + myılsayac + " ve ";
-                                }
-
-
-
-
-
-
-                                // İKİNCİ AY
-                                for (int i = 8; i < 10; i++)
-                                {
-                                    ikincimsayac += amodel[i];
-                                }
-
-
-                                // İKİNCİ YIL
-                                for (int i = 11; i < 15; i++)
-                                {
-                                    ikincimyılsayac += amodel[i];
-                                }
-
-
-                                if (ikincimsayac == "01")
-                                {
-                                    sonyılsayac += "Ocak " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "02")
-                                {
-                                    sonyılsayac += "Şubat " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "03")
-                                {
-                                    sonyılsayac += "Mart " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-
-                                else if (ikincimsayac == "04")
-                                {
-                                    sonyılsayac += "Nisan " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "05")
-                                {
-                                    sonyılsayac += "Mayıs " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-
-                                else if (ikincimsayac == "06")
-                                {
-                                    sonyılsayac += "Haziran " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "07")
-                                {
-                                    sonyılsayac += "Temmuz " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "08")
-                                {
-                                    sonyılsayac += "Ağustos " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "09")
-                                {
-                                    sonyılsayac += "Eylül " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "10")
-                                {
-                                    sonyılsayac += "Ekim " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-
-                                else if (ikincimsayac == "11")
-                                {
-                                    sonyılsayac += "Kasım " + ikincimyılsayac + " model yılları arasında ";
-                                }
-
-                                else if (ikincimsayac == "12")
-                                {
-                                    sonyılsayac += "Aralık " + ikincimyılsayac + " model yılları arasında ";
-                                }
-                                sonyil = sonyılsayac;
-                            }
-
-
-
-
-
-                            else sonyil = metindizi[5] + " model yılı ve arasında ";
-
-
-
-
-
-
-                            // YILYAZ
-                            string ilkyazdır = "";
-                            string metyaz = metindizi[5];
-                            for (int i = 0; i <= metyaz.Length - 1; i++)
-                            {
-                                if (metyaz[i] != '→')
-                                {
-                                    ilkyazdır += metyaz[i];
-                                }
-                            }
 
 
 
@@ -1912,41 +1347,7 @@ namespace periyodikbakimci
 
                             // eğer arasıysa model yılı
 
-                            string sonson = metindizi[5];
-                            string yazsonson = "";
-                            if (sonson.StartsWith("→"))
-                            {
-                                for (int i = 1; i <= sonson.Length - 1; i++)
-                                {
-                                    yazsonson += sonson[i];
-                                }
-                            }
-                            else if (sonson.EndsWith("→"))
-                            {
-                                for (int i = 0; i <= sonson.Length - 2; i++)
-                                {
-                                    yazsonson += sonson[i];
-                                }
-                            }
-                            else yazsonson = metindizi[5];
-
-
-
-                            string yyyaz = "";
-
-
-                            if (metindizi[5].Length == 5)
-                            {
-                                yyyaz = "";
-                                yazsonson = sonyil;
-                            }
-
-                            else if (metindizi[5].Contains('/'))
-                            {
-                                yyyaz = " (" + sonyil + ")";
-                            }
-
-                            else yyyaz = " (model yılı ve arasında üretilen)";
+                            string uyumum = yazmodel(arabaninyili, sonyil);    // metod çağrıldı
 
 
 
@@ -1966,7 +1367,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                            "<td>: " + yazsonson + yyyaz + "</td>\n" +
+                            "<td>: " + uyumum + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
@@ -1987,7 +1388,7 @@ namespace periyodikbakimci
                             "</tbody>\n" +
                             "</table>\n" +
                             "</div>\n" +
-                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " " + motor + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + "</span> üretilen, <span style=\"color: #ff0000;\">" + motoyaz + araba + " " + model + " araçlara uyumlu hava filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br />\n" +
+                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " " + motor + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + "</span> üretilen, <span style=\"color: #ff0000;\">" + araba + " " + model + " araçlara uyumlu hava filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br />\n" +
                             "<ul>\n" +
                             "<li>" + markayazısı + "</li>\n" +
                             "<li>" + araba + " " + model + " hava filtresi için " + mevcut + "</li>\n" +
@@ -2022,14 +1423,6 @@ namespace periyodikbakimci
             }
 
         }
-
-
-
-
-
-
-
-
 
 
 
@@ -4503,10 +3896,7 @@ namespace periyodikbakimci
 
 
 
-
-
-
-
+        
 
 
 
@@ -6959,7 +6349,7 @@ namespace periyodikbakimci
         // POLEN FİLTRESİ İŞLEMİ
         private void button4_Click(object sender, EventArgs e)
         {
-            // Audi A6(4F/C6) 2.0TDI Hava Filtresi 10/08→ (100KW-136HP) Bosch
+            // Audi A6(4F/C6) 2.0TDI Hava Filtresi 10/2008→ (100KW-136HP) Bosch
 
 
             richTextBox1.Clear();
