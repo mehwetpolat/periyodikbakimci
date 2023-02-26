@@ -703,7 +703,7 @@ namespace periyodikbakimci
 
 
         // YIL ARASI YAZ METOD
-        public static string yazmodel(string metin5, string sonyil)
+        public static string yazmodelimetod(string metin5, string sonyil)
         {
             string sonson = metin5;
             string yazsonson = "";
@@ -763,12 +763,12 @@ namespace periyodikbakimci
 
 
         // HAVA FİLTRESİ İŞLEMİ
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnHava_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
 
             // AUDİ MODELİ HAVA FİLTRESİ
-            if (textBox1.Text.ToUpper().Contains("AUDİ"))
+            if (TxtAracBslk.Text.ToUpper().Contains("AUDİ"))
             {
                 // Audi A6(4F/C6) 2.0TDI Hava Filtresi 10/2008→ (100KW-136HP)Bosch
 
@@ -778,16 +778,16 @@ namespace periyodikbakimci
 
 
 
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Hava"))
                         {
@@ -826,7 +826,7 @@ namespace periyodikbakimci
 
 
                             // ÜRÜN MARKA BÖLME İŞLEMİ
-                            string sonmarka = sonmarkametod(textBox1.Text);   // metod çağrıldı
+                            string sonmarka = sonmarkametod(TxtAracBslk.Text);   // metod çağrıldı
 
 
 
@@ -853,7 +853,7 @@ namespace periyodikbakimci
 
 
                             // MEVCUT MARKA İŞLEMİ
-                            string mevcut = elimizdekimetod(textBox3.Text);    // metod çağrıldı
+                            string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
 
 
 
@@ -863,7 +863,7 @@ namespace periyodikbakimci
 
 
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                            string motoyaz = motokodmetod(textBox2.Text);   // metod çağrıldı
+                            string motoyaz = motokodmetod(TxtMotorKod.Text);   // metod çağrıldı
 
 
 
@@ -897,7 +897,7 @@ namespace periyodikbakimci
 
                             // eğer arasıysa model yılı
 
-                            string yazmodeli = yazmodel(metindizi[5], sonyil);   // metod çağrıldı
+                            string yazmodeli = yazmodelimetod(metindizi[5], sonyil);   // metod çağrıldı
 
 
 
@@ -932,7 +932,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -989,10 +989,10 @@ namespace periyodikbakimci
 
             // BMW MODELİ HAVA FİLTRESİ
 
-            else if (textBox1.Text.ToUpper().Contains("BMW"))
+            else if (TxtAracBslk.Text.ToUpper().Contains("BMW"))
             {
 
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[1], model2 = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
@@ -1000,9 +1000,9 @@ namespace periyodikbakimci
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Hava"))
                         {
@@ -1036,7 +1036,7 @@ namespace periyodikbakimci
 
 
                             // ÜRÜN MARKA BÖLME İŞLEMİ
-                            string sonmarka = sonmarkametod(textBox1.Text);    // metod çağrıldı
+                            string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
 
 
 
@@ -1058,7 +1058,7 @@ namespace periyodikbakimci
 
                             // MARKA İŞLEMİ
 
-                            string markayazısı = markaciklamametod(textBox1.Text);    // metod çağrıldı
+                            string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
 
 
 
@@ -1067,7 +1067,7 @@ namespace periyodikbakimci
 
 
                             // MEVCUT MARKA İŞLEMİ
-                            string mevcut = elimizdekimetod(textBox3.Text);     // metod çağrıldı
+                            string mevcut = elimizdekimetod(TxtMevcutMrk.Text);     // metod çağrıldı
 
 
 
@@ -1077,7 +1077,7 @@ namespace periyodikbakimci
 
 
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                            string motoyaz = motokodmetod(textBox2.Text);     // metod çağrıldı
+                            string motoyaz = motokodmetod(TxtMotorKod.Text);     // metod çağrıldı
 
 
 
@@ -1110,7 +1110,7 @@ namespace periyodikbakimci
 
                             // eğer arasıysa model yılı
 
-                            string sonson = yazmodel(metindizi[5], sonyil);        // metod çağrıldı
+                            string sonson = yazmodelimetod(metindizi[5], sonyil);        // metod çağrıldı
 
 
 
@@ -1159,7 +1159,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -1225,18 +1225,18 @@ namespace periyodikbakimci
 
             // CHEVROLET - CITROEN - DACIA MODELİ HAVA FİLTRESİ
 
-            else if(textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
+            else if(TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Hava"))
                         {
@@ -1273,7 +1273,7 @@ namespace periyodikbakimci
 
 
                             // ÜRÜN MARKA BÖLME İŞLEMİ
-                            string sonmarka = sonmarkametod(textBox1.Text);    // metod çağrıldı
+                            string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
 
 
 
@@ -1294,7 +1294,7 @@ namespace periyodikbakimci
 
 
                             // MARKA İŞLEMİ
-                            string markayazısı = markaciklamametod(textBox1.Text);    // metod çağrıldı
+                            string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
 
 
 
@@ -1304,7 +1304,7 @@ namespace periyodikbakimci
 
                             // MEVCUT MARKA İŞLEMİ
 
-                            string mevcut = elimizdekimetod(textBox3.Text);    // metod çağrıldı
+                            string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
 
 
 
@@ -1314,7 +1314,7 @@ namespace periyodikbakimci
 
 
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                            string motoyaz = motokodmetod(textBox2.Text);    // metod çağrıldı
+                            string motoyaz = motokodmetod(TxtMotorKod.Text);    // metod çağrıldı
 
 
 
@@ -1347,7 +1347,7 @@ namespace periyodikbakimci
 
                             // eğer arasıysa model yılı
 
-                            string uyumum = yazmodel(arabaninyili, sonyil);    // metod çağrıldı
+                            string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
 
 
 
@@ -1379,7 +1379,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -1443,7 +1443,7 @@ namespace periyodikbakimci
 
 
         // YAĞ FİLTRESİ İŞLEMİ
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnYag_Click(object sender, EventArgs e)
         {
             // Audi A6(4F/C6) 2.0TDI Hava Filtresi 10/2008→ (100KW-136HP)Bosch
 
@@ -1460,16 +1460,16 @@ namespace periyodikbakimci
 
 
             // AUDİ YAĞ FİLTRESİ
-            if(textBox1.Text.ToUpper().Contains("AUDİ"))
+            if(TxtAracBslk.Text.ToUpper().Contains("AUDİ"))
             {
 
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi.Contains("Yağ"))
                         {
@@ -1506,7 +1506,7 @@ namespace periyodikbakimci
 
 
                             // ÜRÜN MARKA BÖLME İŞLEMİ
-                            string sonmarka = sonmarkametod(textBox1.Text);      // metod çağrıldı
+                            string sonmarka = sonmarkametod(TxtAracBslk.Text);      // metod çağrıldı
 
 
 
@@ -1538,7 +1538,7 @@ namespace periyodikbakimci
 
                             // MEVCUT MARKA İŞLEMİ
 
-                            string mevcut = elimizdekimetod(textBox3.Text);      // metod çağrıldı
+                            string mevcut = elimizdekimetod(TxtMevcutMrk.Text);      // metod çağrıldı
 
 
 
@@ -1548,7 +1548,7 @@ namespace periyodikbakimci
 
 
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                            string motoyaz = motokodmetod(textBox2.Text);      // metod çağrıldı
+                            string motoyaz = motokodmetod(TxtMotorKod.Text);      // metod çağrıldı
 
 
 
@@ -1582,7 +1582,7 @@ namespace periyodikbakimci
 
                             // eğer arasıysa model yılı
 
-                            string yazdır = yazmodel(arabaninyili, sonyil);      // metod çağrıldı
+                            string yazdır = yazmodelimetod(arabaninyili, sonyil);      // metod çağrıldı
 
 
 
@@ -1615,7 +1615,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -1674,17 +1674,17 @@ namespace periyodikbakimci
 
 
             // BMW YAĞ FİLTRESİ
-            else if (textBox1.Text.ToUpper().Contains("BMW"))
+            else if (TxtAracBslk.Text.ToUpper().Contains("BMW"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[1], model2 = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi.Contains("Yağ"))
                         {
@@ -1736,11 +1736,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -1836,9 +1836,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -1847,7 +1847,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -1859,9 +1859,9 @@ namespace periyodikbakimci
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
                             string motoyaz = "";
                             string virgül = "";
-                            if (textBox2.Text.Contains('-'))
+                            if (TxtMotorKod.Text.Contains('-'))
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -1872,7 +1872,7 @@ namespace periyodikbakimci
                                     }
                                 }
                             }
-                            else motoyaz = textBox2.Text.ToUpper();
+                            else motoyaz = TxtMotorKod.Text.ToUpper();
 
 
 
@@ -2427,7 +2427,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -2489,15 +2489,15 @@ namespace periyodikbakimci
 
 
             // CHEVROLET - CITROEN - DACIA YAĞ FİLTRESİ
-           if(textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
+           if(TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi.Contains("Yağ"))
                         {
@@ -2549,11 +2549,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -2649,9 +2649,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -2660,7 +2660,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -2674,7 +2674,7 @@ namespace periyodikbakimci
                             string virgül = "";
 
 
-                            string motto = textBox2.Text;
+                            string motto = TxtMotorKod.Text;
                             int sayac = 0;
 
                             foreach (var item in motto)
@@ -2687,7 +2687,7 @@ namespace periyodikbakimci
 
                             if (sayac <= 5)
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -3244,7 +3244,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -3313,7 +3313,7 @@ namespace periyodikbakimci
 
 
         // YAKIT FİLTRESİ İŞLEMİ
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnYakıt_Click(object sender, EventArgs e)
         {
             // Audi A6(4F/C6) 2.0TDI Hava Filtresi 10/08→ (100KW-136HP) Bosch
 
@@ -3325,18 +3325,18 @@ namespace periyodikbakimci
 
 
             // AUDİ YAKIT FİLTRESİ
-            if(textBox1.Text.ToUpper().Contains("AUDİ"))
+            if(TxtAracBslk.Text.ToUpper().Contains("AUDİ"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Yakıt"))
                         {
@@ -3388,11 +3388,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -3488,9 +3488,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -3499,7 +3499,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -3511,9 +3511,9 @@ namespace periyodikbakimci
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
                             string motoyaz = "";
                             string virgül = "";
-                            if (textBox2.Text.Contains('-'))
+                            if (TxtMotorKod.Text.Contains('-'))
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -3524,7 +3524,7 @@ namespace periyodikbakimci
                                     }
                                 }
                             }
-                            else motoyaz = textBox2.Text.ToUpper();
+                            else motoyaz = TxtMotorKod.Text.ToUpper();
 
 
 
@@ -4072,7 +4072,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">: " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">: " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -4128,18 +4128,18 @@ namespace periyodikbakimci
 
 
             // BMW YAKIT FİLTRESİ
-            else if(textBox1.Text.ToUpper().Contains("BMW"))
+            else if(TxtAracBslk.Text.ToUpper().Contains("BMW"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[1], model2 = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Yakıt"))
                         {
@@ -4191,11 +4191,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -4291,9 +4291,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -4302,7 +4302,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -4314,9 +4314,9 @@ namespace periyodikbakimci
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
                             string motoyaz = "";
                             string virgül = "";
-                            if (textBox2.Text.Contains('-'))
+                            if (TxtMotorKod.Text.Contains('-'))
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -4327,7 +4327,7 @@ namespace periyodikbakimci
                                     }
                                 }
                             }
-                            else motoyaz = textBox2.Text.ToUpper();
+                            else motoyaz = TxtMotorKod.Text.ToUpper();
 
 
 
@@ -4876,7 +4876,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">: " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">: " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -4932,18 +4932,18 @@ namespace periyodikbakimci
 
 
             // CHEVROLET - CITROEN - DACIA YAKIT FİLTRESİ
-            else if(textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
+            else if(TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Yakıt"))
                         {
@@ -4995,11 +4995,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -5095,9 +5095,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -5106,7 +5106,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -5120,7 +5120,7 @@ namespace periyodikbakimci
                             string virgül = "";
 
 
-                            string motto = textBox2.Text;
+                            string motto = TxtMotorKod.Text;
                             int sayac = 0;
 
                             foreach (var item in motto)
@@ -5133,7 +5133,7 @@ namespace periyodikbakimci
 
                             if (sayac <= 5)
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -5691,7 +5691,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">: " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">: " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -5758,7 +5758,7 @@ namespace periyodikbakimci
 
 
         // POLEN FİLTRESİ İŞLEMİ
-        private void button4_Click(object sender, EventArgs e)
+        private void BtnPolen_Click(object sender, EventArgs e)
         {
             // Audi A6(4F/C6) 2.0TDI Hava Filtresi 10/2008→ (100KW-136HP) Bosch
 
@@ -5769,18 +5769,18 @@ namespace periyodikbakimci
 
 
             // AUDİ POLEN FİLTRESİ
-            if(textBox1.Text.ToUpper().Contains("AUDİ"))
+            if(TxtAracBslk.Text.ToUpper().Contains("AUDİ"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Polen"))
                         {
@@ -5832,11 +5832,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -5932,9 +5932,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -5943,7 +5943,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -5955,9 +5955,9 @@ namespace periyodikbakimci
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
                             string motoyaz = "";
                             string virgül = "";
-                            if (textBox2.Text.Contains('-'))
+                            if (TxtMotorKod.Text.Contains('-'))
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -5968,7 +5968,7 @@ namespace periyodikbakimci
                                     }
                                 }
                             }
-                            else motoyaz = textBox2.Text.ToUpper();
+                            else motoyaz = TxtMotorKod.Text.ToUpper();
 
 
 
@@ -6515,7 +6515,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -6569,19 +6569,19 @@ namespace periyodikbakimci
 
 
             // BMW POLEN FİLTRESİ
-            else if(textBox1.Text.ToUpper().Contains("BMW"))
+            else if(TxtAracBslk.Text.ToUpper().Contains("BMW"))
             {
 
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[1], model2 = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Polen"))
                         {
@@ -6633,11 +6633,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -6733,9 +6733,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -6744,7 +6744,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -6756,9 +6756,9 @@ namespace periyodikbakimci
                             // MOTOR KODU VİRGÜLLÜ YAZDIRMA
                             string motoyaz = "";
                             string virgül = "";
-                            if (textBox2.Text.Contains('-'))
+                            if (TxtMotorKod.Text.Contains('-'))
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -6769,7 +6769,7 @@ namespace periyodikbakimci
                                     }
                                 }
                             }
-                            else motoyaz = textBox2.Text.ToUpper();
+                            else motoyaz = TxtMotorKod.Text.ToUpper();
 
 
 
@@ -7327,7 +7327,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
@@ -7380,18 +7380,18 @@ namespace periyodikbakimci
 
 
             // CHEVROLET - CITROEN - DACIA POLEN FİLTRESİ
-            else if (textBox1.Text.ToUpper().Contains("CHEVROLET") || textBox1.Text.ToUpper().Contains("CITROEN") || textBox1.Text.ToUpper().Contains("DACIA"))
+            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
-                string[] metindizi = textBox1.Text.Split(' ');
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
 
                 string araba = metindizi[0], model = metindizi[1], motor = metindizi[2], uruncesidi = metindizi[3] + " " + metindizi[4], arabaninyili = metindizi[5];
 
 
 
 
-                if (textBox2.Text != "")
+                if (TxtMotorKod.Text != "")
                 {
-                    if (textBox3.Text != "")
+                    if (TxtMevcutMrk.Text != "")
                     {
                         if (metindizi[3].Contains("Polen"))
                         {
@@ -7443,11 +7443,11 @@ namespace periyodikbakimci
                             // ÜRÜN MARKA BÖLME İŞLEMİ
                             string aaa = "";
                             string sonmarka = "";
-                            for (int i = textBox1.Text.Length - 1; i >= 0; i--)
+                            for (int i = TxtAracBslk.Text.Length - 1; i >= 0; i--)
                             {
-                                if (textBox1.Text[i] != ')')
+                                if (TxtAracBslk.Text[i] != ')')
                                 {
-                                    aaa += textBox1.Text[i];
+                                    aaa += TxtAracBslk.Text[i];
                                 }
                                 else break;
                             }
@@ -7543,9 +7543,9 @@ namespace periyodikbakimci
 
                             string mevcut = "";
                             string virgul = "";
-                            if (textBox3.Text.Contains(" "))
+                            if (TxtMevcutMrk.Text.Contains(" "))
                             {
-                                string[] mdizi = textBox3.Text.Split(' ');
+                                string[] mdizi = TxtMevcutMrk.Text.Split(' ');
 
                                 foreach (var item in mdizi)
                                 {
@@ -7554,7 +7554,7 @@ namespace periyodikbakimci
                                 }
                                 mevcut += " marka seçeneklerimiz mevcuttur.";
                             }
-                            else mevcut += textBox3.Text + " marka seçeneğimiz mevcuttur.";
+                            else mevcut += TxtMevcutMrk.Text + " marka seçeneğimiz mevcuttur.";
 
 
 
@@ -7568,7 +7568,7 @@ namespace periyodikbakimci
                             string virgül = "";
 
 
-                            string motto = textBox2.Text;
+                            string motto = TxtMotorKod.Text;
                             int sayac = 0;
 
                             foreach(var item in motto)
@@ -7581,7 +7581,7 @@ namespace periyodikbakimci
 
                             if (sayac <= 5)
                             {
-                                string[] mot = textBox2.Text.ToUpper().Split('-');
+                                string[] mot = TxtMotorKod.Text.ToUpper().Split('-');
 
                                 foreach (var item in mot)
                                 {
@@ -8139,7 +8139,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + textBox2.Text.ToUpper() + " " + "</td>\n" +
+                            "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +

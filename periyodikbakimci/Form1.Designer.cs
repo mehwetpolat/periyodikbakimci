@@ -29,65 +29,65 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtnHava = new System.Windows.Forms.Button();
+            this.BtnYag = new System.Windows.Forms.Button();
+            this.BtnYakıt = new System.Windows.Forms.Button();
+            this.TxtAracBslk = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnPolen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtMotorKod = new System.Windows.Forms.TextBox();
+            this.TxtMevcutMrk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnHava
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(12, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 45);
-            this.button1.TabIndex = 3;
-            this.button1.TabStop = false;
-            this.button1.Text = "HAVA FİLTRESİ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnHava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnHava.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnHava.Location = new System.Drawing.Point(12, 104);
+            this.BtnHava.Name = "BtnHava";
+            this.BtnHava.Size = new System.Drawing.Size(308, 45);
+            this.BtnHava.TabIndex = 3;
+            this.BtnHava.TabStop = false;
+            this.BtnHava.Text = "HAVA FİLTRESİ";
+            this.BtnHava.UseVisualStyleBackColor = false;
+            this.BtnHava.Click += new System.EventHandler(this.BtnHava_Click);
             // 
-            // button2
+            // BtnYag
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(359, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(287, 45);
-            this.button2.TabIndex = 4;
-            this.button2.TabStop = false;
-            this.button2.Text = "YAĞ FİLTRESİ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnYag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnYag.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnYag.Location = new System.Drawing.Point(359, 104);
+            this.BtnYag.Name = "BtnYag";
+            this.BtnYag.Size = new System.Drawing.Size(287, 45);
+            this.BtnYag.TabIndex = 4;
+            this.BtnYag.TabStop = false;
+            this.BtnYag.Text = "YAĞ FİLTRESİ";
+            this.BtnYag.UseVisualStyleBackColor = false;
+            this.BtnYag.Click += new System.EventHandler(this.BtnYag_Click);
             // 
-            // button3
+            // BtnYakıt
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(685, 104);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(313, 45);
-            this.button3.TabIndex = 5;
-            this.button3.TabStop = false;
-            this.button3.Text = "YAKIT FİLTRESİ";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BtnYakıt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnYakıt.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnYakıt.Location = new System.Drawing.Point(685, 104);
+            this.BtnYakıt.Name = "BtnYakıt";
+            this.BtnYakıt.Size = new System.Drawing.Size(313, 45);
+            this.BtnYakıt.TabIndex = 5;
+            this.BtnYakıt.TabStop = false;
+            this.BtnYakıt.Text = "YAKIT FİLTRESİ";
+            this.BtnYakıt.UseVisualStyleBackColor = false;
+            this.BtnYakıt.Click += new System.EventHandler(this.BtnYakıt_Click);
             // 
-            // textBox1
+            // TxtAracBslk
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 56);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(634, 33);
-            this.textBox1.TabIndex = 0;
+            this.TxtAracBslk.Location = new System.Drawing.Point(12, 56);
+            this.TxtAracBslk.Multiline = true;
+            this.TxtAracBslk.Name = "TxtAracBslk";
+            this.TxtAracBslk.Size = new System.Drawing.Size(634, 33);
+            this.TxtAracBslk.TabIndex = 0;
             // 
             // richTextBox1
             // 
@@ -98,18 +98,18 @@
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
-            // button4
+            // BtnPolen
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(1043, 104);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(334, 45);
-            this.button4.TabIndex = 6;
-            this.button4.TabStop = false;
-            this.button4.Text = "POLEN FİLTRESİ";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.BtnPolen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BtnPolen.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnPolen.Location = new System.Drawing.Point(1043, 104);
+            this.BtnPolen.Name = "BtnPolen";
+            this.BtnPolen.Size = new System.Drawing.Size(334, 45);
+            this.BtnPolen.TabIndex = 6;
+            this.BtnPolen.TabStop = false;
+            this.BtnPolen.Text = "POLEN FİLTRESİ";
+            this.BtnPolen.UseVisualStyleBackColor = false;
+            this.BtnPolen.Click += new System.EventHandler(this.BtnPolen_Click);
             // 
             // label1
             // 
@@ -122,21 +122,21 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Araç Başlığını Giriniz";
             // 
-            // textBox2
+            // TxtMotorKod
             // 
-            this.textBox2.Location = new System.Drawing.Point(685, 55);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 33);
-            this.textBox2.TabIndex = 1;
+            this.TxtMotorKod.Location = new System.Drawing.Point(685, 55);
+            this.TxtMotorKod.Multiline = true;
+            this.TxtMotorKod.Name = "TxtMotorKod";
+            this.TxtMotorKod.Size = new System.Drawing.Size(313, 33);
+            this.TxtMotorKod.TabIndex = 1;
             // 
-            // textBox3
+            // TxtMevcutMrk
             // 
-            this.textBox3.Location = new System.Drawing.Point(1043, 56);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(334, 33);
-            this.textBox3.TabIndex = 2;
+            this.TxtMevcutMrk.Location = new System.Drawing.Point(1043, 56);
+            this.TxtMevcutMrk.Multiline = true;
+            this.TxtMevcutMrk.Name = "TxtMevcutMrk";
+            this.TxtMevcutMrk.Size = new System.Drawing.Size(334, 33);
+            this.TxtMevcutMrk.TabIndex = 2;
             // 
             // label2
             // 
@@ -168,15 +168,15 @@
             this.ClientSize = new System.Drawing.Size(1424, 786);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtMevcutMrk);
+            this.Controls.Add(this.TxtMotorKod);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.BtnPolen);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TxtAracBslk);
+            this.Controls.Add(this.BtnYakıt);
+            this.Controls.Add(this.BtnYag);
+            this.Controls.Add(this.BtnHava);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Periyodik Bakımcı";
@@ -188,15 +188,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtnHava;
+        private System.Windows.Forms.Button BtnYag;
+        private System.Windows.Forms.Button BtnYakıt;
+        private System.Windows.Forms.TextBox TxtAracBslk;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnPolen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtMotorKod;
+        private System.Windows.Forms.TextBox TxtMevcutMrk;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }
