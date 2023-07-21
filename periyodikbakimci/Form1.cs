@@ -1214,31 +1214,65 @@ namespace periyodikbakimci
 
 
 
-            // FİESTA - MONDEO MODELİ HAVA FİLTRESİ
-
-            else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA") || TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+            // FORD MODELİ HAVA FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
-                // ARAÇ BAŞLIĞI
-                string araba = metindizi[0],
-                model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5],
-                motor = metindizi[6],
-                uruncesidi = metindizi[7] + " " + metindizi[8],
-                arabaninyili = metindizi[9];
+
+
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+
+                else // normal ford
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
 
 
                 if (TxtMevcutMrk.Text != "")
                 {
-                    if (metindizi[7].Contains("Hava"))
+                    if (uruncesidi.Contains("Hava"))
                     {
-
+                        // Ford Focus-I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
                         // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
+
+                        
+                       
+
 
 
                         // KWHP
-                        string kwhp = kwhpmetot(metindizi[10]);    // metod çağrıldı
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
 
 
 
@@ -1426,9 +1460,9 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN - DACIA - FORD HAVA FİLTRESİ
+            // CHEVROLET - CITROEN - DACIA HAVA FİLTRESİ
 
-            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA") || TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
@@ -1626,10 +1660,6 @@ namespace periyodikbakimci
             }
 
 
-
-
-
-            
 
         }
 
@@ -2097,30 +2127,65 @@ namespace periyodikbakimci
 
 
 
-            // FİESTA - MONDEO MODELİ YAĞ FİLTRESİ
-            if (TxtAracBslk.Text.ToUpper().Contains("FİESTA") || TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+            // FORD MODELİ YAĞ FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
-                // ARAÇ BAŞLIĞI
-                string araba = metindizi[0],
-                model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5],
-                motor = metindizi[6],
-                uruncesidi = metindizi[7] + " " + metindizi[8],
-                arabaninyili = metindizi[9];
+
+
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+
+                else // normal ford
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
 
 
                 if (TxtMevcutMrk.Text != "")
                 {
-                    if (metindizi[7].Contains("Yağ"))
+                    if (uruncesidi.Contains("Yağ"))
                     {
-
+                        // Ford Focus-I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
                         // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
 
 
+
+
+
+
                         // KWHP
-                        string kwhp = kwhpmetot(metindizi[10]);    // metod çağrıldı
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
 
 
 
@@ -2205,7 +2270,6 @@ namespace periyodikbakimci
 
 
 
-
                         // BAŞLIK YAZDIRMA İŞLEMİ
                         string baslık = TxtAracBslk.Text;
 
@@ -2250,7 +2314,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                            "<td>: " + sonyil + "</td>\n" +
+                            "<td>: " + uyumum + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
@@ -2312,8 +2376,8 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN - DACIA - FORD YAĞ FİLTRESİ
-            if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA") || TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            // CHEVROLET - CITROEN - DACIA YAĞ FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
@@ -2962,30 +3026,65 @@ namespace periyodikbakimci
 
 
 
-            // FİESTA - MONDEO YAKIT FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA") || TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+            // FORD YAKIT FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
-                // ARAÇ BAŞLIĞI
-                string araba = metindizi[0],
-                model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5],
-                motor = metindizi[6],
-                uruncesidi = metindizi[7] + " " + metindizi[8],
-                arabaninyili = metindizi[9];
+
+
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+
+                else // normal ford
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
 
 
                 if (TxtMevcutMrk.Text != "")
                 {
-                    if (metindizi[7].Contains("Yakıt"))
+                    if (uruncesidi.Contains("Yakıt"))
                     {
+                        // Ford Focus-I 1.6 / 16V Yakıt Filtresi 1998-2004 (74KW-100HP)Sardes
+                        // Ford Fiesta VI / Fiesta VII 1.25 Yakıt Filtresi 2008→ (60KW-82HP)Sardes
 
-                        // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
+
+
+
 
 
                         // KWHP
-                        string kwhp = kwhpmetot(metindizi[10]);    // metod çağrıldı
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
 
 
 
@@ -3064,11 +3163,6 @@ namespace periyodikbakimci
                         "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
                         "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                         "</tr>\n";
-
-                        // metod çağrıldı
-
-
-
 
 
 
@@ -3179,8 +3273,8 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN - DACIA - FORD YAKIT FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA") || TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            // CHEVROLET - CITROEN - DACIA YAKIT FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
@@ -3842,30 +3936,65 @@ namespace periyodikbakimci
 
 
 
-            // FORD FİESTA MONDEO POLEN FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA") || TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+            // FORD POLEN FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
-                // ARAÇ BAŞLIĞI
-                string araba = metindizi[0],
-                model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5],
-                motor = metindizi[6],
-                uruncesidi = metindizi[7] + " " + metindizi[8],
-                arabaninyili = metindizi[9];
+
+
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+
+                else // normal ford
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
 
 
                 if (TxtMevcutMrk.Text != "")
                 {
-                    if (metindizi[7].Contains("Polen"))
+                    if (uruncesidi.Contains("Polen"))
                     {
-
+                        // Ford Focus-I 1.6 / 16V Polen Filtresi 1998-2004 (74KW-100HP)Sardes
                         // Ford Fiesta VI / Fiesta VII 1.25 Polen Filtresi 2008→ (60KW-82HP)Sardes
 
 
+
+
+
+
                         // KWHP
-                        string kwhp = kwhpmetot(metindizi[10]);    // metod çağrıldı
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
 
 
 
@@ -3944,7 +4073,6 @@ namespace periyodikbakimci
                         "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
                         "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
                         "</tr>\n";
-
 
 
 
@@ -4053,8 +4181,8 @@ namespace periyodikbakimci
 
 
 
-            // CHEVROLET - CITROEN - DACIA - FORD POLEN FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA") || TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            // CHEVROLET - CITROEN - DACIA POLEN FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("CHEVROLET") || TxtAracBslk.Text.ToUpper().Contains("CITROEN") || TxtAracBslk.Text.ToUpper().Contains("DACIA"))
             {
                 string[] metindizi = TxtAracBslk.Text.Split(' ');
 
