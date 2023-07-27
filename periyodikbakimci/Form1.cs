@@ -292,7 +292,7 @@ namespace periyodikbakimci
                         sonc += a[i];
                     }
 
-                    sonyil = " " + sonc + " Model Yılı Ve Öncesinde ";
+                    sonyil = " " + sonc + " Model Yılı Ve Öncesi";
 
 
                 }
@@ -305,7 +305,7 @@ namespace periyodikbakimci
                         sonc += a[i];
                     }
 
-                    sonyil = " " + sonc + " Model Yılı Ve Sonrasında ";
+                    sonyil = " " + sonc + " Model Yılı Ve Sonrası";
                 }
             }
 
@@ -316,7 +316,7 @@ namespace periyodikbakimci
 
             else if (amodel.Length == 9)
             {
-                sonyil = amodel + " Model Yılı Ve Arasında ";
+                sonyil = amodel + " Model Yılı Ve Arası";
             }
 
 
@@ -341,85 +341,85 @@ namespace periyodikbakimci
 
                 if (msayac == "01")
                 {
-                    sonyil = "Ocak " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Ocak " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
                 else if (msayac == "02")
                 {
-                    sonyil = "Şubat " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Şubat " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
                 else if (msayac == "03")
                 {
-                    sonyil = "Mart " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Mart " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
                 else if (msayac == "04")
                 {
-                    sonyil = "Nisan " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Nisan " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
 
                 else if (msayac == "05")
                 {
-                    sonyil = "Mayıs " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Mayıs " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
 
                 else if (msayac == "06")
                 {
-                    sonyil = "Haziran " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Haziran " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
 
                 else if (msayac == "07")
                 {
-                    sonyil = "Şubat " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Şubat " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
 
                 else if (msayac == "07")
                 {
-                    sonyil = "Temmuz " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Temmuz " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
 
                 else if (msayac == "08")
                 {
-                    sonyil = "Ağustos " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Ağustos " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
                 else if (msayac == "09")
                 {
-                    sonyil = "Eylül " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Eylül " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
 
                 else if (msayac == "10")
                 {
-                    sonyil = "Ekim " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Ekim " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
                 else if (msayac == "11")
                 {
-                    sonyil = "Kasım " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Kasım " + myılsayac + " Model Yılı Ve Öncesi";
                 }
 
 
                 else if (msayac == "12")
                 {
-                    sonyil = "Aralık " + myılsayac + " Model Yılı Ve Öncesinde";
+                    sonyil = "Aralık " + myılsayac + " Model Yılı Ve Öncesi";
                 }
             }
 
@@ -444,27 +444,27 @@ namespace periyodikbakimci
 
                 if (msayac == "01")
                 {
-                    sonyil = "Ocak " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Ocak " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
                 else if (msayac == "02")
                 {
-                    sonyil = "Şubat " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Şubat " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "03")
                 {
-                    sonyil = "Mart " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Mart " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "04")
                 {
-                    sonyil = "Nisan " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Nisan " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
@@ -472,54 +472,54 @@ namespace periyodikbakimci
                 else if (msayac == "05")
                 {
 
-                    sonyil = "Mayıs " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Mayıs " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "06")
                 {
-                    sonyil = "Haziran " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Haziran " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "07")
                 {
-                    sonyil = "Temmuz " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Temmuz " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "08")
                 {
-                    sonyil = "Ağustos " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Ağustos " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "09")
                 {
-                    sonyil = "Eylül " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Eylül " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
                 else if (msayac == "10")
                 {
-                    sonyil = "Ekim " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Ekim " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
 
                 else if (msayac == "11")
                 {
-                    sonyil = "Kasım " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Kasım " + myılsayac + " Model Yılı Ve Sonrası";
                 }
 
 
                 else if (msayac == "12")
                 {
-                    sonyil = "Aralık " + myılsayac + " Model Yılı Ve Sonrasında";
+                    sonyil = "Aralık " + myılsayac + " Model Yılı Ve Sonrası";
                 }
             }
 
@@ -627,69 +627,69 @@ namespace periyodikbakimci
 
                 if (ikincimsayac == "01")
                 {
-                    sonyılsayac += "Ocak " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Ocak " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "02")
                 {
-                    sonyılsayac += "Şubat " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Şubat " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "03")
                 {
-                    sonyılsayac += "Mart " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Mart " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
 
                 else if (ikincimsayac == "04")
                 {
-                    sonyılsayac += "Nisan " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Nisan " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "05")
                 {
-                    sonyılsayac += "Mayıs " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Mayıs " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
 
                 else if (ikincimsayac == "06")
                 {
-                    sonyılsayac += "Haziran " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Haziran " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "07")
                 {
-                    sonyılsayac += "Temmuz " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Temmuz " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "08")
                 {
-                    sonyılsayac += "Ağustos " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Ağustos " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "09")
                 {
-                    sonyılsayac += "Eylül " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Eylül " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "10")
                 {
-                    sonyılsayac += "Ekim " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Ekim " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
 
                 else if (ikincimsayac == "11")
                 {
-                    sonyılsayac += "Kasım " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Kasım " + ikincimyılsayac + " Model Yılları Arası";
                 }
 
                 else if (ikincimsayac == "12")
                 {
-                    sonyılsayac += "Aralık " + ikincimyılsayac + " Model Yılları Arasında";
+                    sonyılsayac += "Aralık " + ikincimyılsayac + " Model Yılları Arası";
                 }
                 sonyil = sonyılsayac;
             }
-            else sonyil = model5 + "  Model Yılı Arasında";
+            else sonyil = model5 + " Model Yılı";
 
 
 
@@ -740,7 +740,7 @@ namespace periyodikbakimci
                 yyyaz = " (" + sonyil + ")";
             }
 
-            else yyyaz = " (model yılı ve arasında üretilen)";
+            else yyyaz = " Model Yılı Ve Arası";
 
 
 
@@ -983,6 +983,8 @@ namespace periyodikbakimci
 
 
 
+
+
             // BMW MODELİ HAVA FİLTRESİ
 
             else if (TxtAracBslk.Text.ToUpper().Contains("BMW"))
@@ -1120,8 +1122,8 @@ namespace periyodikbakimci
 
 
                             // ARAÇ YAZISI
-                            string baslan = model[0].ToString();
-                            string uyumluarac = "BMW " + baslan + " Serisi";
+                            string baslangıc = model[0].ToString();
+                            string uyumluarac = "BMW " + baslangıc + " Serisi";
 
 
 
@@ -1159,7 +1161,7 @@ namespace periyodikbakimci
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                            "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
+                            "<td class=\"\">: " + sonmarka + "</td>\n" +
                             "</tr>\n" +
                             "</tbody>\n" +
                             "</table>\n" +
@@ -1205,251 +1207,6 @@ namespace periyodikbakimci
             }
 
 
-
-
-
-
-
-
-
-
-
-            // FORD MODELİ HAVA FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
-            {
-                string[] metindizi = TxtAracBslk.Text.Split(' ');
-
-                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
-
-
-
-
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
-                }
-
-
-                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
-                }
-
-
-                else // normal ford
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[3] + " " + metindizi[4];
-                    arabaninyili = metindizi[5];
-                    kwsı = metindizi[6];
-                }
-
-
-
-
-                if (TxtMevcutMrk.Text != "")
-                {
-                    if (uruncesidi.Contains("Hava"))
-                    {
-                        // Ford Focus-I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
-                        // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
-
-                        
-                       
-
-
-
-                        // KWHP
-                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // BEYGİR BULMA İŞLEMİ
-                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
-
-
-
-
-                        string kwwhpp = "";
-                        for (int i = 1; i <= kwhp.Length - 2; i++)
-                        {
-                            kwwhpp += kwhp[i];
-                        }
-
-
-
-
-
-
-
-                        // ÜRÜN MARKA BÖLME İŞLEMİ
-                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MODEL YILI YAZISI
-
-                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MARKA İŞLEMİ
-                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // MEVCUT MARKA İŞLEMİ
-
-                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                        string motoyaz = "";
-                        if (TxtMotorKod.Text == "")
-                        {
-                            motoyaz = "";
-                        }
-                        else motoyaz =
-                        "<tr>\n" +
-                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                        "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
-                        "</tr>\n";
-
-
-
-
-
-
-                        // BAŞLIK YAZDIRMA İŞLEMİ
-                        string baslık = TxtAracBslk.Text;
-
-
-
-
-
-
-
-
-
-
-                        // UYUMLU MODELLER İŞLEMİ
-                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // eğer arasıysa model yılı
-
-                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // SON YAZDIRMA İŞLEMİ
-
-                        string metin =
-                        "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
-                        "<div>\n" +
-                        "<table style=\"border-collapse: collapse;\">\n" +
-                        "<tbody>\n" +
-                        "<tr>\n" +
-                        "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                        "<td>: " + araba + " " + model + "</td>\n" +
-                        "</tr>\n" +
-                        "<tr>\n" +
-                        "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                        "<td>: " + uyumum + "</td>\n" +
-                        "</tr>\n" +
-                        "<tr>\n" +
-                        "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                        "<td>: " + " " + motor + "</td>\n" +
-                        "</tr>\n" +
-                        "<tr>\n" +
-                        "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                        "<td>:" + " " + kwwhpp + "</td>\n" +
-                        "</tr>\n" +
-                        motoyaz +
-                        "<tr>\n" +
-                        "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                        "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
-                        "</tr>\n" +
-                        "</tbody>\n" +
-                        "</table>\n" +
-                        "</div>\n" +
-                        "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " " + motor + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + "</span> üretilen, <span style=\"color: #ff0000;\">" + araba + " " + model + " araçlara uyumlu hava filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br />\n" +
-                        "<ul>\n" +
-                        "<li>" + markayazısı + "</li>\n" +
-                        "<li>" + araba + " " + model + " hava filtresi için " + mevcut + "</li>\n" +
-                        "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                        "</ul>\n" +
-                        "<div></div>\n" +
-                        "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Hava Filtresi Ne İşe Yarar ?</span><br />\n" +
-                        "<ul>\n" +
-                        "<li>Yakıtın tepkimeye girebilmesi için gerekli havayı süzer.</li>\n" +
-                        "<li>Dışarıdan aldığı havayı filtreleyerek motor içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
-                        "<li>Yanma odasına temiz hava göndererek yakıtın daha kolay tepkimeye girmesini sağlar.</li>\n" +
-                        "<li>Yakıtın çiğ atılmasını engeller.</li>\n" +
-                        "</ul>\n" +
-                        "<div></div>\n" +
-                        "<div></div>\n" +
-                        "<span style=\"font-weight: bold;\">" + araba + " " + model + " Hava Filtresi Faydaları</span><br />\n" +
-                        "<ul>\n" +
-                        "<li>Düzenli hava karışımı yakıt tasarrufu sağlar.</li>\n" +
-                        "<li>Motorun daha sessiz ve gürültüsüz çalışmasını sağlar.</li>\n" +
-                        "<li>Araç performansını ve çekişini arttırır.</li>\n" +
-                        "</ul>\n" +
-                        "<div> </div>\n" +
-                        "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                        richTextBox1.Text = metin;
-                    }
-                    else MessageBox.Show("Girdiğiniz Ürün Hava Filtresine Ait Değildir !!!");
-                }
-                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
-            }
 
 
 
@@ -1661,6 +1418,279 @@ namespace periyodikbakimci
 
 
 
+
+
+
+
+
+
+
+
+            // FORD MODELİ HAVA FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            {
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
+
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
+
+                // Ford Focus I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
+                // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
+                // Ford Focus II 1.6TDCİ Hava Filtresi →03/2007 (80KW-109HP)Sardes
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("III"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    uruncesidi = metindizi[6] + " " + metindizi[7];
+                    arabaninyili = metindizi[8];
+                    kwsı = metindizi[9];
+                }
+
+                else //benzinli normal
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
+
+
+                if (TxtMevcutMrk.Text != "")
+                {
+                    if (uruncesidi.Contains("Hava"))
+                    {
+
+
+
+
+
+
+
+                        // KWHP
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // BEYGİR BULMA İŞLEMİ
+                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
+
+
+
+
+                        string kwwhpp = "";
+                        for (int i = 1; i <= kwhp.Length - 2; i++)
+                        {
+                            kwwhpp += kwhp[i];
+                        }
+
+
+
+
+
+
+
+                        // ÜRÜN MARKA BÖLME İŞLEMİ
+                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MODEL YILI YAZISI
+
+                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MARKA İŞLEMİ
+                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // MEVCUT MARKA İŞLEMİ
+
+                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
+                        string motoyaz = "";
+                        if (TxtMotorKod.Text == "")
+                        {
+                            motoyaz = "";
+                        }
+                        else motoyaz =
+                        "<tr>\n" +
+                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
+                        "<td class=\"\">:" + " " + TxtMotorKod.Text + " " + "</td>\n" +
+                        "</tr>\n";
+
+
+
+
+
+
+                        // BAŞLIK YAZDIRMA İŞLEMİ
+                        string baslık = TxtAracBslk.Text;
+
+
+
+
+
+
+
+
+
+
+                        // UYUMLU MODELLER İŞLEMİ
+                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // eğer arasıysa model yılı
+
+                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
+
+
+
+
+                        string kelimeeki;
+                        if (sonyil.Contains("Öncesi"))
+                        {
+                            kelimeeki = "nde";
+                        }
+                        else
+                        {
+                            kelimeeki = "nda";
+                        }
+
+
+
+                        // SON YAZDIRMA İŞLEMİ
+
+                        string metin =
+                        "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
+                        "<div>\n" +
+                        "<table style=\"border-collapse: collapse;\">\n" +
+                        "<tbody>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                        "<td>: " + araba + " " + model + "</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                        "<td>: " + sonyil + "</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                        "<td>: " + " " + motor + "</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                        "<td>:" + " " + kwwhpp + "</td>\n" +
+                        "</tr>\n" +
+                        motoyaz +
+                        "<tr>\n" +
+                        "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                        "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
+                        "</tr>\n" +
+                        "</tbody>\n" +
+                        "</table>\n" +
+                        "</div>\n" +
+                        "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + araba + " " + model + " araçlara uyumlu hava filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                        "<ul>\n" +
+                        "<li>" + markayazısı + "</li>\n" +
+                        "<li>" + araba + " " + model + " hava filtresi için " + mevcut + "</li>\n" +
+                        "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                        "</ul>\n" +
+                        "<div></div>\n" +
+                        "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Hava Filtresi Ne İşe Yarar ?</span><br />\n" +
+                        "<ul>\n" +
+                        "<li>Yakıtın tepkimeye girebilmesi için gerekli havayı süzer.</li>\n" +
+                        "<li>Dışarıdan aldığı havayı filtreleyerek motor içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
+                        "<li>Yanma odasına temiz hava göndererek yakıtın daha kolay tepkimeye girmesini sağlar.</li>\n" +
+                        "<li>Yakıtın çiğ atılmasını engeller.</li>\n" +
+                        "</ul>\n" +
+                        "<div></div>\n" +
+                        "<div></div>\n" +
+                        "<span style=\"font-weight: bold;\">" + araba + " " + model + " Hava Filtresi Faydaları</span><br />\n" +
+                        "<ul>\n" +
+                        "<li>Düzenli hava karışımı yakıt tasarrufu sağlar.</li>\n" +
+                        "<li>Motorun daha sessiz ve gürültüsüz çalışmasını sağlar.</li>\n" +
+                        "<li>Araç performansını ve çekişini arttırır.</li>\n" +
+                        "</ul>\n" +
+                        "<div> </div>\n" +
+                        "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        richTextBox1.Text = metin;
+                    }
+                    else MessageBox.Show("Girdiğiniz Ürün Hava Filtresine Ait Değildir !!!");
+                }
+                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
+            }
+
+
         }
 
 
@@ -1683,9 +1713,6 @@ namespace periyodikbakimci
 
 
             richTextBox1.Clear();
-
-
-
 
 
 
@@ -2036,8 +2063,8 @@ namespace periyodikbakimci
 
 
                             // ARAÇ YAZISI
-                            string baslan = model[0].ToString();
-                            string uyumluarac = "BMW " + baslan + " Serisi";
+                            string baslangıc = model[0].ToString();
+                            string uyumluarac = "BMW " + baslangıc + " Serisi";
 
 
 
@@ -2117,254 +2144,6 @@ namespace periyodikbakimci
 
 
 
-            }
-
-
-
-
-
-
-
-
-
-            // FORD MODELİ YAĞ FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
-            {
-                string[] metindizi = TxtAracBslk.Text.Split(' ');
-
-                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
-
-
-
-
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
-                }
-
-
-                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
-                }
-
-
-                else // normal ford
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[3] + " " + metindizi[4];
-                    arabaninyili = metindizi[5];
-                    kwsı = metindizi[6];
-                }
-
-
-
-
-                if (TxtMevcutMrk.Text != "")
-                {
-                    if (uruncesidi.Contains("Yağ"))
-                    {
-                        // Ford Focus-I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
-                        // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
-
-
-
-
-
-
-                        // KWHP
-                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // BEYGİR BULMA İŞLEMİ
-                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
-
-
-
-
-                        string kwwhpp = "";
-                        for (int i = 1; i <= kwhp.Length - 2; i++)
-                        {
-                            kwwhpp += kwhp[i];
-                        }
-
-
-
-
-
-
-
-                        // ÜRÜN MARKA BÖLME İŞLEMİ
-                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MODEL YILI YAZISI
-
-                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MARKA İŞLEMİ
-                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // MEVCUT MARKA İŞLEMİ
-
-                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                        string motoyaz = "";
-                        if (TxtMotorKod.Text == "")
-                        {
-                            motoyaz = "";
-                        }
-                        else motoyaz =
-                        "<tr>\n" +
-                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                        "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
-                        "</tr>\n";
-
-
-
-
-
-
-                        // BAŞLIK YAZDIRMA İŞLEMİ
-                        string baslık = TxtAracBslk.Text;
-
-
-
-
-
-
-
-
-
-
-                        // UYUMLU MODELLER İŞLEMİ
-                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // eğer arasıysa model yılı
-
-                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // SON YAZDIRMA İŞLEMİ
-
-                        string metin =
-                            "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
-                            "<div>\n" +
-                            "<table style=\"border-collapse: collapse;\">\n" +
-                            "<tbody>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                            "<td>: " + araba + " " + model + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                            "<td>: " + uyumum + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                            "<td>:" + " " + motor + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                            "<td>:" + " " + kwwhpp + "</td>\n" +
-                            "</tr>\n" +
-                            motoyaz +
-                            "<tr>\n" +
-                            "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                            "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
-                            "</tr>\n" +
-                            "</tbody>\n" +
-                            "</table>\n" +
-                            "</div>\n" +
-                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " " + motor + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + "</span> üretilen, <span style=\"color: #ff0000;\">" + araba + " " + model + " araçlara uyumlu yağ filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br />\n" +
-                            "<ul>\n" +
-                            "<li>" + markayazısı + "</li>\n" +
-                            "<li>" + araba + " " + model + " yağ filtresi için " + mevcut + "</li>\n" +
-                            "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                            "</ul>\n" +
-                            "<div></div>\n" +
-                            "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Yağ Filtresi Ne İşe Yarar ?</span><br />\n" +
-                            "<ul>\n" +
-                            "<li>Otomobil motorları ağırlıklı olarak  metal (piston-krank-gömlek vb.) parçalardan oluşur. Hepsi bir biriyle bağlantılı çalıştığı için sürtünme oluşur.</li>\n" +
-                            "<li>Bu sürtünmeyi azaltmak ve en aza indirmek için motor yağı kullanılır. Sürtünme ne olursa olsun devam ettiği için aşınan metal parçalar, demir tozları oluşur.</li>\n" +
-                            "<li>Metal parçaları ve tozları devridaim sırasında yağ filtresinden geçerek  yağın daha temiz motora ulaşmasını sağlar .</li>\n" +
-                            "<li>Yağ filtresini periyodik bakımlarınızda değiştiriniz.</li>\n" +
-                            "<li>Yağ filtrelerinin içerisinde bulunan kağıt Artık yağı süzemeyecek duruma geldiği zaman süzemediği parçacıkları ve demir tozlarını motorun içerisine göndermeye başlayacak ve motor içerisinde bulunan yedek parçaları daha fazla aşındırma yapacaktır.</li>\n" +
-                            "</ul>\n" +
-                            "<div></div>\n" +
-                            "<div></div>\n" +
-                            "<span style=\"font-weight: bold;\">" + araba + " " + model + " Yağ Filtresi Faydaları</span><br />\n" +
-                            "<ul>\n" +
-                            "<li>Motor aşınmasını en aza indirir</li>\n" +
-                            "<li>Motor içindeki yağın daha temiz dolaşımını sağlar.</li>\n" +
-                            "<li>Motor ömrünü uzatır.</li>\n" +
-                            "<li>Motor performansını artırır.</li>\n" +
-                            "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar. </li>\n" +
-                            "</ul>\n" +
-                            "<div> </div>\n" +
-                            "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                        richTextBox1.Text = metin;
-                    }
-                    else MessageBox.Show("Girdiğiniz Ürün Yağ Filtresine Ait Değildir !!!");
-                }
-                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
             }
 
 
@@ -2577,7 +2356,284 @@ namespace periyodikbakimci
             }
 
 
-            
+
+
+
+
+
+
+
+
+            // FORD MODELİ YAĞ FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            {
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
+
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
+
+
+
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("III"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    uruncesidi = metindizi[6] + " " + metindizi[7];
+                    arabaninyili = metindizi[8];
+                    kwsı = metindizi[9];
+                }
+
+
+                else //benzinli normal
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
+
+
+                if (TxtMevcutMrk.Text != "")
+                {
+                    if (uruncesidi.Contains("Yağ"))
+                    {
+                        // Ford Focus I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
+                        // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
+
+
+
+
+
+
+                        // KWHP
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // BEYGİR BULMA İŞLEMİ
+                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
+
+
+
+
+                        string kwwhpp = "";
+                        for (int i = 1; i <= kwhp.Length - 2; i++)
+                        {
+                            kwwhpp += kwhp[i];
+                        }
+
+
+
+
+
+
+
+                        // ÜRÜN MARKA BÖLME İŞLEMİ
+                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MODEL YILI YAZISI
+
+                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MARKA İŞLEMİ
+                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // MEVCUT MARKA İŞLEMİ
+
+                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
+                        string motoyaz = "";
+                        if (TxtMotorKod.Text == "")
+                        {
+                            motoyaz = "";
+                        }
+                        else motoyaz =
+                        "<tr>\n" +
+                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
+                        "<td class=\"\">:" + " " + TxtMotorKod.Text + " " + "</td>\n" +
+                        "</tr>\n";
+
+
+
+
+
+
+                        // BAŞLIK YAZDIRMA İŞLEMİ
+                        string baslık = TxtAracBslk.Text;
+
+
+
+
+
+
+
+
+
+
+                        // UYUMLU MODELLER İŞLEMİ
+                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // eğer arasıysa model yılı
+
+                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
+
+
+
+
+
+                        string kelimeeki;
+
+                        if (sonyil.Contains("Öncesi"))
+                        {
+                            kelimeeki = "nde";
+                        }
+                        else
+                        {
+                            kelimeeki = "nda";
+                        }
+
+
+
+                        // SON YAZDIRMA İŞLEMİ
+
+                        string metin =
+                            "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
+                            "<div>\n" +
+                            "<table style=\"border-collapse: collapse;\">\n" +
+                            "<tbody>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                            "<td>: " + araba + " " + model + "</td>\n" +
+                            "</tr>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                            "<td>: " + sonyil + "</td>\n" +
+                            "</tr>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                            "<td>:" + " " + motor + "</td>\n" +
+                            "</tr>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                            "<td>:" + " " + kwwhpp + "</td>\n" +
+                            "</tr>\n" +
+                            motoyaz +
+                            "<tr>\n" +
+                            "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                            "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
+                            "</tr>\n" +
+                            "</tbody>\n" +
+                            "</table>\n" +
+                            "</div>\n" +
+                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + araba + " " + model + " araçlara uyumlu yağ filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                            "<ul>\n" +
+                            "<li>" + markayazısı + "</li>\n" +
+                            "<li>" + araba + " " + model + " yağ filtresi için " + mevcut + "</li>\n" +
+                            "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                            "</ul>\n" +
+                            "<div></div>\n" +
+                            "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Yağ Filtresi Ne İşe Yarar ?</span><br />\n" +
+                            "<ul>\n" +
+                            "<li>Otomobil motorları ağırlıklı olarak  metal (piston-krank-gömlek vb.) parçalardan oluşur. Hepsi bir biriyle bağlantılı çalıştığı için sürtünme oluşur.</li>\n" +
+                            "<li>Bu sürtünmeyi azaltmak ve en aza indirmek için motor yağı kullanılır. Sürtünme ne olursa olsun devam ettiği için aşınan metal parçalar, demir tozları oluşur.</li>\n" +
+                            "<li>Metal parçaları ve tozları devridaim sırasında yağ filtresinden geçerek  yağın daha temiz motora ulaşmasını sağlar .</li>\n" +
+                            "<li>Yağ filtresini periyodik bakımlarınızda değiştiriniz.</li>\n" +
+                            "<li>Yağ filtrelerinin içerisinde bulunan kağıt Artık yağı süzemeyecek duruma geldiği zaman süzemediği parçacıkları ve demir tozlarını motorun içerisine göndermeye başlayacak ve motor içerisinde bulunan yedek parçaları daha fazla aşındırma yapacaktır.</li>\n" +
+                            "</ul>\n" +
+                            "<div></div>\n" +
+                            "<div></div>\n" +
+                            "<span style=\"font-weight: bold;\">" + araba + " " + model + " Yağ Filtresi Faydaları</span><br />\n" +
+                            "<ul>\n" +
+                            "<li>Motor aşınmasını en aza indirir</li>\n" +
+                            "<li>Motor içindeki yağın daha temiz dolaşımını sağlar.</li>\n" +
+                            "<li>Motor ömrünü uzatır.</li>\n" +
+                            "<li>Motor performansını artırır.</li>\n" +
+                            "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar. </li>\n" +
+                            "</ul>\n" +
+                            "<div> </div>\n" +
+                            "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        richTextBox1.Text = metin;
+                    }
+                    else MessageBox.Show("Girdiğiniz Ürün Yağ Filtresine Ait Değildir !!!");
+                }
+                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
+            }
+
         }
 
 
@@ -2942,8 +2998,8 @@ namespace periyodikbakimci
 
 
                             // ARAÇ YAZISI
-                            string baslan = model[0].ToString();
-                            string uyumluarac = "BMW " + baslan + " Serisi";
+                            string baslangıc = model[0].ToString();
+                            string uyumluarac = "BMW " + baslangıc + " Serisi";
 
 
 
@@ -3019,251 +3075,6 @@ namespace periyodikbakimci
                 else MessageBox.Show("Motor Kodu Girilmedi !!!");
             }
 
-
-
-
-
-
-
-
-            // FORD YAKIT FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
-            {
-                string[] metindizi = TxtAracBslk.Text.Split(' ');
-
-                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
-
-
-
-
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
-                }
-
-
-                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
-                }
-
-
-                else // normal ford
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[3] + " " + metindizi[4];
-                    arabaninyili = metindizi[5];
-                    kwsı = metindizi[6];
-                }
-
-
-
-
-                if (TxtMevcutMrk.Text != "")
-                {
-                    if (uruncesidi.Contains("Yakıt"))
-                    {
-                        // Ford Focus-I 1.6 / 16V Yakıt Filtresi 1998-2004 (74KW-100HP)Sardes
-                        // Ford Fiesta VI / Fiesta VII 1.25 Yakıt Filtresi 2008→ (60KW-82HP)Sardes
-
-
-
-
-
-
-                        // KWHP
-                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // BEYGİR BULMA İŞLEMİ
-                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
-
-
-
-
-                        string kwwhpp = "";
-                        for (int i = 1; i <= kwhp.Length - 2; i++)
-                        {
-                            kwwhpp += kwhp[i];
-                        }
-
-
-
-
-
-
-
-                        // ÜRÜN MARKA BÖLME İŞLEMİ
-                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MODEL YILI YAZISI
-
-                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MARKA İŞLEMİ
-                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // MEVCUT MARKA İŞLEMİ
-
-                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                        string motoyaz = "";
-                        if (TxtMotorKod.Text == "")
-                        {
-                            motoyaz = "";
-                        }
-                        else motoyaz =
-                        "<tr>\n" +
-                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                        "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
-                        "</tr>\n";
-
-
-
-
-
-
-                        // BAŞLIK YAZDIRMA İŞLEMİ
-                        string baslık = TxtAracBslk.Text;
-
-
-
-
-
-
-
-
-
-
-                        // UYUMLU MODELLER İŞLEMİ
-                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // eğer arasıysa model yılı
-
-                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // SON YAZDIRMA İŞLEMİ
-
-                        string metin =
-                           "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
-                           "<div>\n" +
-                           "<table style=\"border-collapse: collapse;\">\n" +
-                           "<tbody>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                           "<td>: " + araba + " " + model + "</td>\n" +
-                           "</tr>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                           "<td>: " + sonyil + "</td>\n" +
-                           "</tr>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                           "<td>:" + " " + motor + "</td>\n" +
-                           "</tr>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                           "<td>:" + " " + kwwhpp + "</td>\n" +
-                           "</tr>\n" +
-                           motoyaz +
-                           "<tr>\n" +
-                           "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                           "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
-                           "</tr>\n" +
-                           "</tbody>\n" +
-                           "</table>\n" +
-                           "</div>\n" +
-                           "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " " + motor + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + "</span> üretilen, <span style=\"color: #ff0000;\">" + araba + " " + model + " araçlara uyumlu yakıt filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br />\n" +
-                           "<ul>\n" +
-                           "<li>" + markayazısı + "</li>\n" +
-                           "<li>" + araba + " " + model + " yakıt filtresi için " + mevcut + "</li>\n" +
-                           "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                           "</ul>\n" +
-                           "<div></div>\n" +
-                           "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Yakıt Filtresi Ne İşe Yarar ?</span><br />\n" +
-                           "<ul>\n" +
-                           "<li>Zamanla yakıt içerisinde oluşabilecek katı partikülleri süzmeye yarar.</li>\n" +
-                           "<li>Enjeksiyon sistemine temiz yakıt gelmesini sağlar.</li>\n" +
-                           "<li>Araç motorunun daha düzenli çalışmasını sağlar.</li>\n" +
-                           "<li>Yanma odasındaki yakıtın tepkimeye girmesini kolaylaştırır.</li>\n" +
-                           "</ul>\n" +
-                           "<div></div>\n" +
-                           "<div></div>\n" +
-                           "<span style=\"font-weight: bold;\">" + araba + " " + model + " Yakıt Filtresi Faydaları</span><br />\n" +
-                           "<ul>\n" +
-                           "<li>Araç çekiş ve performansını arttırır.</li>\n" +
-                           "<li>Yakıt sisteminde bulunan yedek parça ömrünü uzatır.</li>\n" +
-                           "<li>Aracın rolanti dengesini sağlar.</li>\n" +
-                           "<li>Aracın rahat çalışmasını sağlar.</li>\n" +
-                           "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar.</li>\n" +
-                           "</ul>\n" +
-                           "<div> </div>\n" +
-                           "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                        richTextBox1.Text = metin;
-                    }
-                    else MessageBox.Show("Girdiğiniz Ürün Yakıt Filtresine Ait Değildir !!!");
-                }
-                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
-            }
 
 
 
@@ -3474,11 +3285,284 @@ namespace periyodikbakimci
                 }
                 else MessageBox.Show("Motor Kodu Girilmedi !!!");
             }
-        
-            
-            
 
-            
+
+
+
+
+
+
+
+
+            // FORD YAKIT FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            {
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
+
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
+
+
+
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("III"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    uruncesidi = metindizi[6] + " " + metindizi[7];
+                    arabaninyili = metindizi[8];
+                    kwsı = metindizi[9];
+                }
+
+
+                else //benzinli normal
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
+
+
+                if (TxtMevcutMrk.Text != "")
+                {
+                    if (uruncesidi.Contains("Yakıt"))
+                    {
+                        // Ford Focus I 1.6 / 16V Yakıt Filtresi 1998-2004 (74KW-100HP)Sardes
+                        // Ford Fiesta VI / Fiesta VII 1.25 Yakıt Filtresi 2008→ (60KW-82HP)Sardes
+
+
+
+
+
+
+                        // KWHP
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // BEYGİR BULMA İŞLEMİ
+                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
+
+
+
+
+                        string kwwhpp = "";
+                        for (int i = 1; i <= kwhp.Length - 2; i++)
+                        {
+                            kwwhpp += kwhp[i];
+                        }
+
+
+
+
+
+
+
+                        // ÜRÜN MARKA BÖLME İŞLEMİ
+                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MODEL YILI YAZISI
+
+                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MARKA İŞLEMİ
+                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // MEVCUT MARKA İŞLEMİ
+
+                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
+                        string motoyaz = "";
+                        if (TxtMotorKod.Text == "")
+                        {
+                            motoyaz = "";
+                        }
+                        else motoyaz =
+                        "<tr>\n" +
+                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
+                        "<td class=\"\">:" + " " + TxtMotorKod.Text + " " + "</td>\n" +
+                        "</tr>\n";
+
+
+
+
+
+
+                        // BAŞLIK YAZDIRMA İŞLEMİ
+                        string baslık = TxtAracBslk.Text;
+
+
+
+
+
+
+
+
+
+
+                        // UYUMLU MODELLER İŞLEMİ
+                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // eğer arasıysa model yılı
+
+                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
+
+
+
+
+                        string kelimeeki;
+
+                        if (sonyil.Contains("Öncesi"))
+                        {
+                            kelimeeki = "nde";
+                        }
+                        else
+                        {
+                            kelimeeki = "nda";
+                        }
+
+
+
+
+                        // SON YAZDIRMA İŞLEMİ
+
+                        string metin =
+                           "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
+                           "<div>\n" +
+                           "<table style=\"border-collapse: collapse;\">\n" +
+                           "<tbody>\n" +
+                           "<tr>\n" +
+                           "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                           "<td>: " + araba + " " + model + "</td>\n" +
+                           "</tr>\n" +
+                           "<tr>\n" +
+                           "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                           "<td>: " + sonyil + "</td>\n" +
+                           "</tr>\n" +
+                           "<tr>\n" +
+                           "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                           "<td>:" + " " + motor + "</td>\n" +
+                           "</tr>\n" +
+                           "<tr>\n" +
+                           "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                           "<td>:" + " " + kwwhpp + "</td>\n" +
+                           "</tr>\n" +
+                           motoyaz +
+                           "<tr>\n" +
+                           "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                           "<td class=\"\">: " + sonmarka.ToUpper() + "</td>\n" +
+                           "</tr>\n" +
+                           "</tbody>\n" +
+                           "</table>\n" +
+                           "</div>\n" +
+                           "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + araba + " " + model + " araçlara uyumlu yakıt filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                           "<ul>\n" +
+                           "<li>" + markayazısı + "</li>\n" +
+                           "<li>" + araba + " " + model + " yakıt filtresi için " + mevcut + "</li>\n" +
+                           "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                           "</ul>\n" +
+                           "<div></div>\n" +
+                           "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Yakıt Filtresi Ne İşe Yarar ?</span><br />\n" +
+                           "<ul>\n" +
+                           "<li>Zamanla yakıt içerisinde oluşabilecek katı partikülleri süzmeye yarar.</li>\n" +
+                           "<li>Enjeksiyon sistemine temiz yakıt gelmesini sağlar.</li>\n" +
+                           "<li>Araç motorunun daha düzenli çalışmasını sağlar.</li>\n" +
+                           "<li>Yanma odasındaki yakıtın tepkimeye girmesini kolaylaştırır.</li>\n" +
+                           "</ul>\n" +
+                           "<div></div>\n" +
+                           "<div></div>\n" +
+                           "<span style=\"font-weight: bold;\">" + araba + " " + model + " Yakıt Filtresi Faydaları</span><br />\n" +
+                           "<ul>\n" +
+                           "<li>Araç çekiş ve performansını arttırır.</li>\n" +
+                           "<li>Yakıt sisteminde bulunan yedek parça ömrünü uzatır.</li>\n" +
+                           "<li>Aracın rolanti dengesini sağlar.</li>\n" +
+                           "<li>Aracın rahat çalışmasını sağlar.</li>\n" +
+                           "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar.</li>\n" +
+                           "</ul>\n" +
+                           "<div> </div>\n" +
+                           "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        richTextBox1.Text = metin;
+                    }
+                    else MessageBox.Show("Girdiğiniz Ürün Yakıt Filtresine Ait Değildir !!!");
+                }
+                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
+            }
+
 
         }
         
@@ -3713,8 +3797,6 @@ namespace periyodikbakimci
 
 
 
-
-
             // BMW POLEN FİLTRESİ
             else if (TxtAracBslk.Text.ToUpper().Contains("BMW"))
             {
@@ -3852,8 +3934,8 @@ namespace periyodikbakimci
 
 
                             // ARAÇ YAZISI
-                            string baslan = model[0].ToString();
-                            string uyumluarac = "BMW " + baslan + " Serisi";
+                            string baslangıc = model[0].ToString();
+                            string uyumluarac = "BMW " + baslangıc + " Serisi";
 
 
 
@@ -3928,250 +4010,6 @@ namespace periyodikbakimci
                 else MessageBox.Show("Motor Kodu Girilmedi !!!");
             }
 
-
-
-
-
-
-
-
-
-            // FORD POLEN FİLTRESİ
-            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
-            {
-                string[] metindizi = TxtAracBslk.Text.Split(' ');
-
-                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
-
-
-
-
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
-                }
-
-
-                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
-                }
-
-
-                else // normal ford
-                {
-                    araba = metindizi[0];
-                    model = metindizi[1];
-                    motor = metindizi[2];
-                    uruncesidi = metindizi[3] + " " + metindizi[4];
-                    arabaninyili = metindizi[5];
-                    kwsı = metindizi[6];
-                }
-
-
-
-
-                if (TxtMevcutMrk.Text != "")
-                {
-                    if (uruncesidi.Contains("Polen"))
-                    {
-                        // Ford Focus-I 1.6 / 16V Polen Filtresi 1998-2004 (74KW-100HP)Sardes
-                        // Ford Fiesta VI / Fiesta VII 1.25 Polen Filtresi 2008→ (60KW-82HP)Sardes
-
-
-
-
-
-
-                        // KWHP
-                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // BEYGİR BULMA İŞLEMİ
-                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
-
-
-
-
-                        string kwwhpp = "";
-                        for (int i = 1; i <= kwhp.Length - 2; i++)
-                        {
-                            kwwhpp += kwhp[i];
-                        }
-
-
-
-
-
-
-
-                        // ÜRÜN MARKA BÖLME İŞLEMİ
-                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MODEL YILI YAZISI
-
-                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MARKA İŞLEMİ
-                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // MEVCUT MARKA İŞLEMİ
-
-                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
-
-
-
-
-
-
-
-
-                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                        string motoyaz = "";
-                        if (TxtMotorKod.Text == "")
-                        {
-                            motoyaz = "";
-                        }
-                        else motoyaz =
-                        "<tr>\n" +
-                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                        "<td class=\"\">:" + " " + TxtMotorKod.Text.ToUpper() + " " + "</td>\n" +
-                        "</tr>\n";
-
-
-
-
-
-
-                        // BAŞLIK YAZDIRMA İŞLEMİ
-                        string baslık = TxtAracBslk.Text;
-
-
-
-
-
-
-
-
-
-
-                        // UYUMLU MODELLER İŞLEMİ
-                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // eğer arasıysa model yılı
-
-                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
-
-
-
-
-
-
-
-                        // SON YAZDIRMA İŞLEMİ
-
-                        string metin =
-                            "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
-                            "<div>\n" +
-                            "<table style=\"border-collapse: collapse;\">\n" +
-                            "<tbody>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                            "<td>: " + araba + " " + model + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                            "<td>: " + sonyil + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                            "<td>:" + " " + motor + "</td>\n" +
-                            "</tr>\n" +
-                            "<tr>\n" +
-                            "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                            "<td>:" + " " + kwwhpp + "</td>\n" +
-                            "</tr>\n" +
-                            motoyaz +
-                            "<tr>\n" +
-                            "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                            "<td class=\"\">:" + " " + sonmarka.ToUpper() + "</td>\n" +
-                            "</tr>\n" +
-                            "</tbody>\n" +
-                            "</table>\n" +
-                            "</div>\n" +
-                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " " + motor + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + "</span> üretilen, <span style=\"color: #ff0000;\">" + araba + " " + model + " araçlara uyumlu polen filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br />\n" +
-                            "<ul>\n" +
-                            "<li>" + markayazısı + "</li>\n" +
-                            "<li>" + araba + " " + model + " polen filtresi için " + mevcut + "</li>\n" +
-                            "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                            "</ul>\n" +
-                            "<div></div>\n" +
-                            "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Polen Filtresi Ne İşe Yarar ?</span><br />\n" +
-                            "<ul>\n" +
-                            "<li>Kabin içerisine girecek havayı temizler.</li>\n" +
-                            "<li>Dışarıdan aldığı havayı filtreleyerek araç içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
-                            "<li>Kalorifer ve klima sisteminin daha kuvvetli üflemesini sağlar.</li>\n" +
-                            "<li>Araç içirisinde oluşabilecek tozlanmayı engeller.</li>\n" +
-                            "</ul>\n" +
-                            "<div></div>\n" +
-                            "<div></div>\n" +
-                            "<span style=\"font-weight: bold;\">" + araba + " " + model + " Polen Filtresi Faydaları</span><br />\n" +
-                            "<ul>\n" +
-                            "<li>Klima ve kalorifer sisteminin daha temiz ve verimli çalışmasını sağlar.</li>\n" +
-                            "<li>Araç içi temiz havalandırma sağlar.</li>\n" +
-                            "<li>Araç içerisinde oluşabilecek kötü kokuları engeller.</li>\n" +
-                            "</ul>\n" +
-                            "<div> </div>\n" +
-                            "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                        richTextBox1.Text = metin;
-                    }
-                    else MessageBox.Show("Girdiğiniz Ürün Polen Filtresine Ait Değildir !!!");
-                }
-                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
-            }
 
 
 
@@ -4397,10 +4235,281 @@ namespace periyodikbakimci
                 }
                 else MessageBox.Show("Motor Kodu Girilmedi !!!");
             }
-        
-        
-            
-            
+
+
+
+
+
+
+
+
+            // FORD POLEN FİLTRESİ
+            else if (TxtAracBslk.Text.ToUpper().Contains("FORD"))
+            {
+                string[] metindizi = TxtAracBslk.Text.Split(' ');
+
+                string araba, model, motor, uruncesidi, arabaninyili, kwsı;
+
+
+
+                // Ford Focus I 1.6 / 16V Polen Filtresi 1998-2004 (74KW-100HP)Sardes
+                // Ford Fiesta VI / Fiesta VII 1.25 Polen Filtresi 2008→ (60KW-82HP)Sardes
+                // Ford Focus III 1.6 Tİ-VCT Polen Filtresi 2011→ (92KW-125HP)Sardes
+                // Ford Focus II 1.6TDCİ Hava Filtresi →03/2007 (80KW-109HP)Sardes
+
+                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[6];
+                    uruncesidi = metindizi[7] + " " + metindizi[8];
+                    arabaninyili = metindizi[9];
+                    kwsı = metindizi[10];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("III"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FOCUS"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    motor = metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                    uruncesidi = metindizi[6] + " " + metindizi[7];
+                    arabaninyili = metindizi[8];
+                    kwsı = metindizi[9];
+                }
+
+
+                else //benzinli normal
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
+
+
+                if (TxtMevcutMrk.Text != "")
+                {
+                    if (uruncesidi.Contains("Polen"))
+                    {
+                        
+
+
+
+
+
+                        // KWHP
+                        string kwhp = kwhpmetot(kwsı);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // BEYGİR BULMA İŞLEMİ
+                        string sonbeygir = beygirbulmetod(kwhp);    // metod çağrıldı
+
+
+
+
+                        string kwwhpp = "";
+                        for (int i = 1; i <= kwhp.Length - 2; i++)
+                        {
+                            kwwhpp += kwhp[i];
+                        }
+
+
+
+
+
+
+
+                        // ÜRÜN MARKA BÖLME İŞLEMİ
+                        string sonmarka = sonmarkametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MODEL YILI YAZISI
+
+                        string modelyılı = modelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MARKA İŞLEMİ
+                        string markayazısı = markaciklamametod(TxtAracBslk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // MEVCUT MARKA İŞLEMİ
+
+                        string mevcut = elimizdekimetod(TxtMevcutMrk.Text);    // metod çağrıldı
+
+
+
+
+
+
+
+
+                        // MOTOR KODU VİRGÜLLÜ YAZDIRMA
+                        string motoyaz = "";
+                        if (TxtMotorKod.Text == "")
+                        {
+                            motoyaz = "";
+                        }
+                        else motoyaz =
+                        "<tr>\n" +
+                        "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
+                        "<td class=\"\">:" + " " + TxtMotorKod.Text + " " + "</td>\n" +
+                        "</tr>\n";
+
+
+
+
+
+
+                        // BAŞLIK YAZDIRMA İŞLEMİ
+                        string baslık = TxtAracBslk.Text;
+
+
+
+
+
+
+
+
+
+
+                        // UYUMLU MODELLER İŞLEMİ
+                        string sonyil = uyumlumodelmetod(arabaninyili);    // metod çağrıldı
+
+
+
+
+
+
+
+                        // eğer arasıysa model yılı
+
+                        string uyumum = yazmodelimetod(arabaninyili, sonyil);    // metod çağrıldı
+
+
+
+                        string kelimeeki;
+
+                        if (sonyil.Contains("Öncesi"))
+                        {
+                            kelimeeki = "nde";
+                        }
+                        else
+                        {
+                            kelimeeki = "nda";
+                        }
+
+
+
+                        // SON YAZDIRMA İŞLEMİ
+
+                        string metin =
+                            "<h2><span style=\"color: #002892;\">" + baslık + "</span></h2>\n" +
+                            "<div>\n" +
+                            "<table style=\"border-collapse: collapse;\">\n" +
+                            "<tbody>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                            "<td>: " + araba + " " + model + "</td>\n" +
+                            "</tr>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                            "<td>: " + sonyil + "</td>\n" +
+                            "</tr>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                            "<td>:" + " " + motor + "</td>\n" +
+                            "</tr>\n" +
+                            "<tr>\n" +
+                            "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                            "<td>:" + " " + kwwhpp + "</td>\n" +
+                            "</tr>\n" +
+                            motoyaz +
+                            "<tr>\n" +
+                            "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                            "<td class=\"\">:" + " " + sonmarka.ToUpper() + "</td>\n" +
+                            "</tr>\n" +
+                            "</tbody>\n" +
+                            "</table>\n" +
+                            "</div>\n" +
+                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + sonmarka + " marka olup " + araba + " " + model + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + araba + " " + model + " araçlara uyumlu polen filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                            "<ul>\n" +
+                            "<li>" + markayazısı + "</li>\n" +
+                            "<li>" + araba + " " + model + " polen filtresi için " + mevcut + "</li>\n" +
+                            "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                            "</ul>\n" +
+                            "<div></div>\n" +
+                            "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Polen Filtresi Ne İşe Yarar ?</span><br />\n" +
+                            "<ul>\n" +
+                            "<li>Kabin içerisine girecek havayı temizler.</li>\n" +
+                            "<li>Dışarıdan aldığı havayı filtreleyerek araç içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
+                            "<li>Kalorifer ve klima sisteminin daha kuvvetli üflemesini sağlar.</li>\n" +
+                            "<li>Araç içirisinde oluşabilecek tozlanmayı engeller.</li>\n" +
+                            "</ul>\n" +
+                            "<div></div>\n" +
+                            "<div></div>\n" +
+                            "<span style=\"font-weight: bold;\">" + araba + " " + model + " Polen Filtresi Faydaları</span><br />\n" +
+                            "<ul>\n" +
+                            "<li>Klima ve kalorifer sisteminin daha temiz ve verimli çalışmasını sağlar.</li>\n" +
+                            "<li>Araç içi temiz havalandırma sağlar.</li>\n" +
+                            "<li>Araç içerisinde oluşabilecek kötü kokuları engeller.</li>\n" +
+                            "</ul>\n" +
+                            "<div> </div>\n" +
+                            "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        richTextBox1.Text = metin;
+                    }
+                    else MessageBox.Show("Girdiğiniz Ürün Polen Filtresine Ait Değildir !!!");
+                }
+                else MessageBox.Show("Elinizdeki Mevcut Markalar Girilmedi !!!");
+            }
+
         }
        
 
