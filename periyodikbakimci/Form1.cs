@@ -1437,7 +1437,23 @@ namespace periyodikbakimci
                 // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
                 // Ford Focus II 1.6TDCİ Hava Filtresi →03/2007 (80KW-109HP)Sardes
 
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                // Ford Mondeo IV 2.0İ Hava Filtresi 1996→2000 (96KW-130HP)Sardes
+
+
+                string ölcüm = metindizi[2];
+
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
                     araba = metindizi[0];
                     model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
@@ -2372,9 +2388,23 @@ namespace periyodikbakimci
                 string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
 
+                
+                // Ford Mondeo IV 2.0İ Hava Filtresi 1996→2000 (96KW-130HP)Sardes
 
 
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                string ölcüm = metindizi[2];
+
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
                     araba = metindizi[0];
                     model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
@@ -2608,7 +2638,7 @@ namespace periyodikbakimci
                             "<div></div>\n" +
                             "<br /><span style=\"font-weight: bold;\">" + araba + " " + model + " Yağ Filtresi Ne İşe Yarar ?</span><br />\n" +
                             "<ul>\n" +
-                            "<li>Otomobil motorları ağırlıklı olarak  metal (piston-krank-gömlek vb.) parçalardan oluşur. Hepsi bir biriyle bağlantılı çalıştığı için sürtünme oluşur.</li>\n" +
+                            "<li>Otomobil motorları ağırlıklı olarak metal (piston-krank-gömlek vb.) parçalardan oluşur. Hepsi bir biriyle bağlantılı çalıştığı için sürtünme oluşur.</li>\n" +
                             "<li>Bu sürtünmeyi azaltmak ve en aza indirmek için motor yağı kullanılır. Sürtünme ne olursa olsun devam ettiği için aşınan metal parçalar, demir tozları oluşur.</li>\n" +
                             "<li>Metal parçaları ve tozları devridaim sırasında yağ filtresinden geçerek  yağın daha temiz motora ulaşmasını sağlar .</li>\n" +
                             "<li>Yağ filtresini periyodik bakımlarınızda değiştiriniz.</li>\n" +
@@ -3303,8 +3333,23 @@ namespace periyodikbakimci
 
 
 
+                
+                // Ford Mondeo IV 2.0İ Hava Filtresi 1996→2000 (96KW-130HP)Sardes
 
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+
+                string ölcüm = metindizi[2];
+
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
                     araba = metindizi[0];
                     model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
@@ -4256,8 +4301,22 @@ namespace periyodikbakimci
                 // Ford Fiesta VI / Fiesta VII 1.25 Polen Filtresi 2008→ (60KW-82HP)Sardes
                 // Ford Focus III 1.6 Tİ-VCT Polen Filtresi 2011→ (92KW-125HP)Sardes
                 // Ford Focus II 1.6TDCİ Hava Filtresi →03/2007 (80KW-109HP)Sardes
+                // Ford Mondeo II 2.0İ Hava Filtresi 1996→2000 (96KW-130HP)Sardes
 
-                if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+
+                string ölcüm = metindizi[2];
+
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                        motor = metindizi[3];
+                        uruncesidi = metindizi[4] + " " + metindizi[5];
+                        arabaninyili = metindizi[6];
+                        kwsı = metindizi[7];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
                     araba = metindizi[0];
                     model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
