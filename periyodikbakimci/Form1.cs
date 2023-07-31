@@ -133,6 +133,21 @@ namespace periyodikbakimci
                 markayazısı = "Kruger, atak taşıt güvencesiyle Türkiye pazarında kendini kanıtlamış markadır.";
             }
 
+            else if (sonmarka.Contains("Delphi"))
+            {
+                markayazısı = "Delphi, yakıt alanında kendini kanıtlamış markadır.";
+            }
+
+            else if (sonmarka.Contains("Kraftvoll"))
+            {
+                markayazısı = "Kraftvoll, dinamik otomotiv güvencesinde Türkiye pazarında önemini her geçen gün çeşitli ürün ağıyla sağlamaktadır.";
+            }
+
+            else if (sonmarka.Contains("Fomoco"))
+            {
+                markayazısı = "Fomoco, Ford Otosan Sanayi orijinal yedek parça markasıdır.";
+            }
+            
 
             return markayazısı;
         }
@@ -1435,6 +1450,8 @@ namespace periyodikbakimci
 
                 // Ford Focus I 1.6 / 16V Hava Filtresi 1998-2004 (74KW-100HP)Sardes
                 // Ford Fiesta VI / Fiesta VII 1.25 Hava Filtresi 2008→ (60KW-82HP)Sardes
+                // Ford Fiesta V / Fiesta VI 1.4 16V Hava Filtresi 2002-2008 (59KW-80HP)Bosch
+
                 // Ford Focus II 1.6TDCİ Hava Filtresi →03/2007 (80KW-109HP)Sardes
 
                 // Ford Mondeo IV 2.0İ Hava Filtresi 1996→2000 (96KW-130HP)Sardes
@@ -1455,12 +1472,25 @@ namespace periyodikbakimci
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
-                    araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
+                    if (TxtAracBslk.Text.ToUpper().Contains("16V"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6] + " " + metindizi[7];
+                        uruncesidi = metindizi[8] + " " + metindizi[9];
+                        arabaninyili = metindizi[10];
+                        kwsı = metindizi[11];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6];
+                        uruncesidi = metindizi[7] + " " + metindizi[8];
+                        arabaninyili = metindizi[9];
+                        kwsı = metindizi[10];
+                    }
+                    
                 }
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
@@ -2404,14 +2434,38 @@ namespace periyodikbakimci
                     kwsı = metindizi[7];
                 }
 
-                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("16V"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6] + " " + metindizi[7];
+                        uruncesidi = metindizi[8] + " " + metindizi[9];
+                        arabaninyili = metindizi[10];
+                        kwsı = metindizi[11];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6];
+                        uruncesidi = metindizi[7] + " " + metindizi[8];
+                        arabaninyili = metindizi[9];
+                        kwsı = metindizi[10];
+                    }
+
                 }
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
@@ -3349,14 +3403,38 @@ namespace periyodikbakimci
                     kwsı = metindizi[7];
                 }
 
-                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("16V"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6] + " " + metindizi[7];
+                        uruncesidi = metindizi[8] + " " + metindizi[9];
+                        arabaninyili = metindizi[10];
+                        kwsı = metindizi[11];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6];
+                        uruncesidi = metindizi[7] + " " + metindizi[8];
+                        arabaninyili = metindizi[9];
+                        kwsı = metindizi[10];
+                    }
+
                 }
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
@@ -4316,14 +4394,38 @@ namespace periyodikbakimci
                         kwsı = metindizi[7];
                 }
 
-                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
-                    motor = metindizi[6];
-                    uruncesidi = metindizi[7] + " " + metindizi[8];
-                    arabaninyili = metindizi[9];
-                    kwsı = metindizi[10];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                    motor = metindizi[3];
+                    uruncesidi = metindizi[4] + " " + metindizi[5];
+                    arabaninyili = metindizi[6];
+                    kwsı = metindizi[7];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("16V"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6] + " " + metindizi[7];
+                        uruncesidi = metindizi[8] + " " + metindizi[9];
+                        arabaninyili = metindizi[10];
+                        kwsı = metindizi[11];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4] + " " + metindizi[5];
+                        motor = metindizi[6];
+                        uruncesidi = metindizi[7] + " " + metindizi[8];
+                        arabaninyili = metindizi[9];
+                        kwsı = metindizi[10];
+                    }
+
                 }
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("TDCİ") || TxtAracBslk.Text.ToUpper().Contains("ECOBOOST")) //dizel
