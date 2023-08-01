@@ -1469,6 +1469,15 @@ namespace periyodikbakimci
                     kwsı = metindizi[7];
                 }
 
+                else if (TxtAracBslk.Text.ToUpper().Contains("RANGER"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
@@ -2434,16 +2443,15 @@ namespace periyodikbakimci
                     kwsı = metindizi[7];
                 }
 
-                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                else if (TxtAracBslk.Text.ToUpper().Contains("RANGER"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
-                    motor = metindizi[3];
-                    uruncesidi = metindizi[4] + " " + metindizi[5];
-                    arabaninyili = metindizi[6];
-                    kwsı = metindizi[7];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
                 }
-
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
@@ -3403,14 +3411,14 @@ namespace periyodikbakimci
                     kwsı = metindizi[7];
                 }
 
-                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                else if (TxtAracBslk.Text.ToUpper().Contains("RANGER"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
-                    motor = metindizi[3];
-                    uruncesidi = metindizi[4] + " " + metindizi[5];
-                    arabaninyili = metindizi[6];
-                    kwsı = metindizi[7];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
                 }
 
 
@@ -4394,14 +4402,14 @@ namespace periyodikbakimci
                         kwsı = metindizi[7];
                 }
 
-                if (TxtAracBslk.Text.ToUpper().Contains("MONDEO"))
+                else if (TxtAracBslk.Text.ToUpper().Contains("RANGER"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
-                    motor = metindizi[3];
-                    uruncesidi = metindizi[4] + " " + metindizi[5];
-                    arabaninyili = metindizi[6];
-                    kwsı = metindizi[7];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
                 }
 
 
