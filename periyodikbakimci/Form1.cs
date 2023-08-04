@@ -1456,6 +1456,9 @@ namespace periyodikbakimci
 
                 // Ford Mondeo IV 2.0İ Hava Filtresi 1996→2000 (96KW-130HP)Sardes
 
+                // Ford Tourneo Connect 1.8TDCİ TurboDiesel Hava Filtresi 2011-2015 (110KW-150HP)Delphi 
+
+                // Ford Transit Tourneo Courier 1.8TDCİ Hava Filtresi 2011-2015 (110KW-150HP)Delphi
 
                 string ölcüm = metindizi[2];
 
@@ -1477,6 +1480,26 @@ namespace periyodikbakimci
                     uruncesidi = metindizi[3] + " " + metindizi[4];
                     arabaninyili = metindizi[5];
                     kwsı = metindizi[6];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("CONNECT"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("COURİER"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
                 }
 
                 else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
@@ -2453,6 +2476,27 @@ namespace periyodikbakimci
                     kwsı = metindizi[6];
                 }
 
+                else if (TxtAracBslk.Text.ToUpper().Contains("CONNECT"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("COURİER"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+
                 else if (TxtAracBslk.Text.ToUpper().Contains("FİESTA"))
                 {
                     if (TxtAracBslk.Text.ToUpper().Contains("16V"))
@@ -3411,6 +3455,7 @@ namespace periyodikbakimci
                     kwsı = metindizi[7];
                 }
 
+
                 else if (TxtAracBslk.Text.ToUpper().Contains("RANGER"))
                 {
                     araba = metindizi[0];
@@ -3419,6 +3464,27 @@ namespace periyodikbakimci
                     uruncesidi = metindizi[3] + " " + metindizi[4];
                     arabaninyili = metindizi[5];
                     kwsı = metindizi[6];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("CONNECT"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("COURİER"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
                 }
 
 
@@ -4410,6 +4476,27 @@ namespace periyodikbakimci
                     uruncesidi = metindizi[3] + " " + metindizi[4];
                     arabaninyili = metindizi[5];
                     kwsı = metindizi[6];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("CONNECT"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[3] + " " + metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("COURİER"))
+                {
+                    araba = metindizi[0];
+                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                    motor = metindizi[4];
+                    uruncesidi = metindizi[5] + " " + metindizi[6];
+                    arabaninyili = metindizi[7];
+                    kwsı = metindizi[8];
                 }
 
 
