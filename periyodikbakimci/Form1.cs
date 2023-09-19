@@ -147,7 +147,17 @@ namespace periyodikbakimci
             {
                 markayazısı = "Fomoco, Ford Otosan Sanayi orijinal yedek parça markasıdır.";
             }
-            
+
+            else if (sonmarka.Contains("BluePrint"))
+            {
+                markayazısı = "BluePrint, Asya ve Avrupa otomobilleri için yüksek kaliteli yedek parça üreticisidir.";
+            }
+
+            else if (sonmarka.Contains("Sion"))
+            {
+                markayazısı = "Sion; otomotiv, binek, hafif ticari ve ticari araçların tüm filtre çeşitlerini 20 yılı aşkın süredir üreten firmadır.";
+            }
+
 
             return markayazısı;
         }
@@ -1773,6 +1783,8 @@ namespace periyodikbakimci
 
 
 
+
+
             // HONDA MODELİ HAVA FİLTRESİ
             else if (TxtAracBslk.Text.ToUpper().Contains("HONDA"))
             {
@@ -1781,15 +1793,61 @@ namespace periyodikbakimci
                 string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
                 // Honda Civic VII 1.6İ
-
-                if (TxtAracBslk.Text.ToUpper().Contains("TEC"))
+                // Honda Accord 2.0 s
+                if (TxtAracBslk.Text.ToUpper().Contains("CİTY"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[3] + " " + metindizi[4];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("CR-V") || TxtAracBslk.Text.ToUpper().Contains("HR-V") || TxtAracBslk.Text.ToUpper().Contains("JAZZ"))
+                {
+                    if (TxtAracBslk.Text.Contains("1.3"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                        motor = metindizi[2] + " " + metindizi[3];
+                        uruncesidi = metindizi[4] + " " + metindizi[5];
+                        arabaninyili = metindizi[6];
+                        kwsı = metindizi[7];
+                    }
+
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("ACCORD"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("TEC") || TxtAracBslk.Text.ToUpper().Contains("2.0İ 16V") || TxtAracBslk.Text.ToUpper().Contains("2.0İ S"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                        motor = metindizi[3] + " " + metindizi[4];
+                        uruncesidi = metindizi[5] + " " + metindizi[6];
+                        arabaninyili = metindizi[7];
+                        kwsı = metindizi[8];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
                 }
 
                 else
@@ -3022,17 +3080,61 @@ namespace periyodikbakimci
                 string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
                 // Honda Civic VII 1.6İ
-
-                if (TxtAracBslk.Text.ToUpper().Contains("TEC"))
+                if (TxtAracBslk.Text.ToUpper().Contains("CİTY"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[3] + " " + metindizi[4];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
                 }
 
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("CR-V") || TxtAracBslk.Text.ToUpper().Contains("HR-V") || TxtAracBslk.Text.ToUpper().Contains("JAZZ"))
+                {
+                    if (TxtAracBslk.Text.Contains("1.3"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                        motor = metindizi[2] + " " + metindizi[3];
+                        uruncesidi = metindizi[4] + " " + metindizi[5];
+                        arabaninyili = metindizi[6];
+                        kwsı = metindizi[7];
+                    }
+
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("ACCORD"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("TEC") || TxtAracBslk.Text.ToUpper().Contains("2.0İ 16V") || TxtAracBslk.Text.ToUpper().Contains("2.0İ S"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                        motor = metindizi[3] + " " + metindizi[4];
+                        uruncesidi = metindizi[5] + " " + metindizi[6];
+                        arabaninyili = metindizi[7];
+                        kwsı = metindizi[8];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
+                }
 
                 else
                 {
@@ -4259,14 +4361,60 @@ namespace periyodikbakimci
 
                 // Honda Civic VII 1.6İ
 
-                if (TxtAracBslk.Text.ToUpper().Contains("TEC"))
+                if (TxtAracBslk.Text.ToUpper().Contains("CİTY"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[3] + " " + metindizi[4];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("CR-V") || TxtAracBslk.Text.ToUpper().Contains("HR-V") || TxtAracBslk.Text.ToUpper().Contains("JAZZ"))
+                {
+                    if (TxtAracBslk.Text.Contains("1.3"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                        motor = metindizi[2] + " " + metindizi[3];
+                        uruncesidi = metindizi[4] + " " + metindizi[5];
+                        arabaninyili = metindizi[6];
+                        kwsı = metindizi[7];
+                    }
+
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("ACCORD"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("TEC") || TxtAracBslk.Text.ToUpper().Contains("2.0İ 16V") || TxtAracBslk.Text.ToUpper().Contains("2.0İ S"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                        motor = metindizi[3] + " " + metindizi[4];
+                        uruncesidi = metindizi[5] + " " + metindizi[6];
+                        arabaninyili = metindizi[7];
+                        kwsı = metindizi[8];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
                 }
 
                 else
@@ -5509,15 +5657,65 @@ namespace periyodikbakimci
                 string araba, model, motor, uruncesidi, arabaninyili, kwsı;
 
                 // Honda Civic VII 1.6İ
+                // Honda Accord 2.0İ 16V
+                // honda accord 2.0 polen
 
-                if (TxtAracBslk.Text.ToUpper().Contains("TEC"))
+                // Honda CR-V 2.0İ 16V Polen Filtresi 1998 (100KW-120HP)Sardes
+
+                if (TxtAracBslk.Text.ToUpper().Contains("CİTY"))
                 {
                     araba = metindizi[0];
-                    model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
-                    motor = metindizi[3] + " " + metindizi[4];
-                    uruncesidi = metindizi[5] + " " + metindizi[6];
-                    arabaninyili = metindizi[7];
-                    kwsı = metindizi[8];
+                    model = metindizi[1] + " " + metindizi[2];
+                    motor = metindizi[2];
+                    uruncesidi = metindizi[3] + " " + metindizi[4];
+                    arabaninyili = metindizi[5];
+                    kwsı = metindizi[6];
+                }
+                
+                
+                else if (TxtAracBslk.Text.ToUpper().Contains("CR-V") || TxtAracBslk.Text.ToUpper().Contains("HR-V") || TxtAracBslk.Text.ToUpper().Contains("JAZZ"))
+                {
+                    if(TxtAracBslk.Text.Contains("1.3"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3];
+                        motor = metindizi[2] + " " + metindizi[3];
+                        uruncesidi = metindizi[4] + " " + metindizi[5];
+                        arabaninyili = metindizi[6];
+                        kwsı = metindizi[7];
+                    }
+                    
+                }
+
+                else if (TxtAracBslk.Text.ToUpper().Contains("ACCORD"))
+                {
+                    if (TxtAracBslk.Text.ToUpper().Contains("TEC") || TxtAracBslk.Text.ToUpper().Contains("2.0İ 16V") || TxtAracBslk.Text.ToUpper().Contains("2.0İ S"))
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2] + " " + metindizi[3] + " " + metindizi[4];
+                        motor = metindizi[3] + " " + metindizi[4];
+                        uruncesidi = metindizi[5] + " " + metindizi[6];
+                        arabaninyili = metindizi[7];
+                        kwsı = metindizi[8];
+                    }
+                    else
+                    {
+                        araba = metindizi[0];
+                        model = metindizi[1] + " " + metindizi[2];
+                        motor = metindizi[2];
+                        uruncesidi = metindizi[3] + " " + metindizi[4];
+                        arabaninyili = metindizi[5];
+                        kwsı = metindizi[6];
+                    }
                 }
 
                 else
