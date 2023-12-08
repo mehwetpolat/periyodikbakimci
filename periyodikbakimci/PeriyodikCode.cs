@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace periyodikbakimci
@@ -766,130 +767,451 @@ namespace periyodikbakimci
 
 
 
+
+
+
+
+
+
+
+        // arac model yazdırma
+        public static string aramarkamodel(string baslk)
+        {
+            string modelim = "";
+
+            string[] dz = baslk.Split(' ');
+
+
+
+            for(int i = 1; i <= dz.Length; i++)
+            {
+                if (!dz[i].Contains("."))
+                {
+                    if (i == 1)
+                    {
+                        modelim += dz[i];
+                    }
+                    else modelim += " " + dz[i];
+                }
+
+                else break;
+            }
+            return modelim;
+        }
+
+
+
+
+        // motor tipi
+        public static string motortipim(string mtr)
+        {
+            string[] dz = mtr.Split(' ');
+
+            string motortip = "";
+            
+
+            for(int i = 1; i < dz.Length; i++)
+            {
+                if (dz[i].Contains('.'))
+                {
+                    motortip += dz[i];
+
+
+                    for(int j = i+1; j < dz.Length; j++)
+                    {
+
+                        if (!dz[j].Contains("Polen") & !dz[j].Contains("Hava") & !dz[j].Contains("Yakıt") & !dz[j].Contains("Yağ"))
+                        {
+                            motortip += " " + dz[j];
+                        }
+                        else break;
+                    }
+                    break;
+                }
+            }
+            return motortip;
+        }
+
+
+
+        // filtre tipi
+        public static string filtretp(string filtr)
+        {
+            string fltp = "";
+
+            if(filtr.Contains("Polen"))
+            {
+                fltp = "Polen Filtresi";
+            }
+            else if (filtr.Contains("Hava"))
+            {
+                fltp = "Hava Filtresi";
+            }
+            else if (filtr.Contains("Yağ"))
+            {
+                fltp = "Yağ Filtresi";
+            }
+            else if (filtr.Contains("Yakıt"))
+            {
+                fltp = "Yakıt Filtresi";
+            }
+            return fltp;
+        }
+
+
+
+        // model yili
+        public static string modelyil(string mdl)
+        {
+            string mdlyl = "";
+
+
+            string[] dz = mdl.Split(' ');
+
+            for(int i = 2; i < dz.Length; i++)
+            {
+                if (dz[i] == "Filtresi")
+                {
+                    mdlyl = dz[i + 1];
+
+                    break;
+                }
+            }
+
+            return mdlyl;
+        }
+
+
+
+        // gücbeygir bulma
+        static string gucbeygr(string kwbyg)
+        {
+
+            string[] dz = kwbyg.Split(' ');
+
+            int cnt = dz.Length -1;
+
+            string kwhpp = dz[cnt];
+
+
+
+            string sonkw = "";
+
+            foreach(var item in kwhpp)
+            {
+                sonkw += item;
+
+                if (item == ')')
+                {
+                    break;
+                }
+            }
+
+            return sonkw;
+        }
+
+
+
+
+        // filtrenin markası
+        static string fltrmarkam(string flmrk)
+        {
+            string[] dz = flmrk.Split(' ');
+
+            int cnt = dz.Length -1;
+
+            string mrktek = dz[cnt];
+
+
+            string sonflmrk = "";
+
+
+
+            for (int i = 2; i < mrktek.Length; i++)
+            {
+                if (mrktek[i] == ')')
+                {
+                    for(int j = i +1; j < mrktek.Length; j++)
+                    {
+                        sonflmrk += mrktek[j];
+                    }
+                }
+            }
+            return sonflmrk;
+
+        }
+
+
+
         private void btn_yazdır_Click(object sender, EventArgs e)
         {
-            if(txt_baslik.Text != "")
+
+            
+
+            if (txt_baslik.Text != "")
             {
-                if(txt_mdl_kwhp_mrk.Text != "")
+                if(txt_mvctmrk.Text != "")
                 {
-                    if (txt_motortp.Text != "")
+                    // TANIMLAMALAR
+
+                    string[] basl = txt_baslik.Text.Split(' ');
+
+
+
+
+                    string
+                        anabaslik = txt_baslik.Text,
+                        aracmarkamodel = basl[0] + " " + (aramarkamodel(txt_baslik.Text)),
+                        motortipi = motortipim(txt_baslik.Text),
+                        fltripi = filtretp(txt_baslik.Text),
+                        motorkodu = txt_motorkod.Text,
+                        amodel = aracmodel(anabaslik),
+                        modelyili = modelyil(txt_baslik.Text),
+                        gücbeygir = gucbeygr(txt_baslik.Text),
+                        fltrmarka = fltrmarkam(txt_baslik.Text);
+
+
+
+
+
+                    // ARAÇ MODEL
+                    string model = aracmodel(anabaslik);
+
+
+                    // KWHP
+                    string kwhp = kwhpmetot(gücbeygir);
+
+
+                    // Beygir bulma işlemi
+                    string sonbeygir = beygirbulmetod(kwhp);
+
+
+
+                    string kwwhpp = "";
+                    for (int i = 1; i <= kwhp.Length - 2; i++)
                     {
-                        if(cmb_filtre.SelectedIndex == 0 || cmb_filtre.SelectedIndex == 1 || cmb_filtre.SelectedIndex == 2 || cmb_filtre.SelectedIndex == 3)
-                        {
-
-                            // TANIMLAMALAR
-
-                            string[] yilkwhpmarka = txt_mdl_kwhp_mrk.Text.Split(' ');
-
-
-                            string[] basl = txt_baslik.Text.Split(' ');
-
-
-                            string
-                                arac = basl[0],
-                                baslik = txt_baslik.Text,
-                                amodel = aracmodel(baslik),
-                                motortipi = txt_motortp.Text,
-                                fltrtipi = cmb_filtre.SelectedItem.ToString(),
-                                motorkodu = txt_motorkod.Text,
-                                modelyili = yilkwhpmarka[0],
-                                gücbeygir = yilkwhpmarka[1],
-                                fltrmarka = yilkwhpmarka[2],
-                                anabaslik = baslik + " " + motortipi + " " + fltrtipi + " " + modelyili + " " + gücbeygir + fltrmarka;
-                                
-
-
-                            // ARAÇ MODEL
-                            string model = aracmodel(baslik);
-
-
-                            // KWHP
-                            string kwhp = kwhpmetot(gücbeygir);
-
-
-                            // Beygir bulma işlemi
-                            string sonbeygir = beygirbulmetod(kwhp);
-
-
-
-                            string kwwhpp = "";
-                            for (int i = 1; i <= kwhp.Length - 2; i++)
-                            {
-                                kwwhpp += kwhp[i];
-                            }
+                        kwwhpp += kwhp[i];
+                    }
 
 
 
 
-                            // MODEL YILI YAZISI
-                            string modelyıl = modelmetod(modelyili);
+                    // MODEL YILI YAZISI
+                    string modelyıl = modelmetod(modelyili);
 
 
 
 
-                            // MARKA YAZISI İŞLEMİ
-                            string markayazısı = markaciklamametod(fltrmarka);
+                    // MARKA YAZISI İŞLEMİ
+                    string markayazısı = markaciklamametod(fltrmarka);
 
 
 
 
-                            // MEVCUT MARKA İŞLEMİ
-                            string mevcut = elimizdekimetod(txt_mvctmrk.Text);
+                    // MEVCUT MARKA İŞLEMİ
+                    string mevcut = elimizdekimetod(txt_mvctmrk.Text);
 
 
 
-                            // MOTOR KODU VİRGÜLLÜ YAZDIRMA
-                            string motoyaz = "";
-                            if (txt_motorkod.Text == "")
-                            {
-                                motoyaz = "";
-                            }
-                            else motoyaz =
-                            "<tr>\n" +
-                            "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
-                            "<td class=\"\">:" + " " + txt_motorkod.Text + " " + "</td>\n" +
-                            "</tr>\n";
+                    // MOTOR KODU VİRGÜLLÜ YAZDIRMA
+                    string motoyaz = "";
+                    if (txt_motorkod.Text == "")
+                    {
+                        motoyaz = "";
+                    }
+                    else motoyaz =
+                    "<tr>\n" +
+                    "<td class=\"\"><span style=\"font-weight: bold;\">Motor Kodu</span></td>\n" +
+                    "<td class=\"\">:" + " " + txt_motorkod.Text + " " + "</td>\n" +
+                    "</tr>\n";
 
 
 
 
 
-                            // UYUMLU MODELLER İŞLEMİ
-                            string sonyil = uyumlumodelmetod(modelyili);
+                    // UYUMLU MODELLER İŞLEMİ
+                    string sonyil = uyumlumodelmetod(modelyili);
 
 
 
 
 
 
-                            // eğer arasıysa model yılı
-                            string uyumum = yazmodelimetod(modelyili, sonyil);
+                    // eğer arasıysa model yılı
+                    string uyumum = yazmodelimetod(modelyili, sonyil);
 
 
 
-                            string kelimeeki;
-                            if (sonyil.Contains("Öncesi"))
-                            {
-                                kelimeeki = "nde";
-                            }
-                            else
-                            {
-                                kelimeeki = "nda";
-                            }
+                    string kelimeeki;
+                    if (sonyil.Contains("Öncesi"))
+                    {
+                        kelimeeki = "nde";
+                    }
+                    else
+                    {
+                        kelimeeki = "nda";
+                    }
 
 
 
-                            // POLEN FİLTRESİ
-                            if(cmb_filtre.SelectedIndex == 0)
-                            {
-                                string metin =
+                    
+
+
+
+
+                    // YAZDIRMA İŞLEMLERİ:
+
+
+
+
+
+                    // POLEN FİLTRESİ İŞLEMİ
+                    if (txt_baslik.Text.Contains("Polen"))
+                    {
+                        string metin =
+                    "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
+                    "<div>\n" +
+                    "<table style=\"border-collapse: collapse;\">\n" +
+                    "<tbody>\n" +
+                    "<tr>\n" +
+                    "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                    "<td>: " + aracmarkamodel + "</td>\n" +
+                    "</tr>\n" +
+                    "<tr>\n" +
+                    "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                    "<td>: " + sonyil + "</td>\n" +
+                    "</tr>\n" +
+                    "<tr>\n" +
+                    "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                    "<td>:" + " " + motortipi + "</td>\n" +
+                    "</tr>\n" +
+                    "<tr>\n" +
+                    "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                    "<td>:" + " " + kwwhpp + "</td>\n" +
+                    "</tr>\n" +
+                    motoyaz +
+                    "<tr>\n" +
+                    "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                    "<td class=\"\">:" + " " + fltrmarka + "</td>\n" +
+                    "</tr>\n" +
+                    "</tbody>\n" +
+                    "</table>\n" +
+                    "</div>\n" +
+                    "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + aracmarkamodel + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + aracmarkamodel + " " + motortipi + " araçlara uyumlu polen filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                    "<ul>\n" +
+                    "<li>" + markayazısı + "</li>\n" +
+                    "<li>" + aracmarkamodel + " polen filtresi için " + mevcut + "</li>\n" +
+                    "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                    "</ul>\n" +
+                    "<div></div>\n" +
+                    "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Polen Filtresi Ne İşe Yarar ?</span><br />\n" +
+                    "<ul>\n" +
+                    "<li>Kabin içerisine girecek havayı temizler.</li>\n" +
+                    "<li>Dışarıdan aldığı havayı filtreleyerek araç içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
+                    "<li>Kalorifer ve klima sisteminin daha kuvvetli üflemesini sağlar.</li>\n" +
+                    "<li>Araç içirisinde oluşabilecek tozlanmayı engeller.</li>\n" +
+                    "</ul>\n" +
+                    "<div></div>\n" +
+                    "<div></div>\n" +
+                    "<span style=\"font-weight: bold;\">" + aracmarkamodel + " Polen Filtresi Faydaları</span><br />\n" +
+                    "<ul>\n" +
+                    "<li>Klima ve kalorifer sisteminin daha temiz ve verimli çalışmasını sağlar.</li>\n" +
+                    "<li>Araç içi temiz havalandırma sağlar.</li>\n" +
+                    "<li>Araç içerisinde oluşabilecek kötü kokuları engeller.</li>\n" +
+                    "</ul>\n" +
+                    "<div> </div>\n" +
+                    "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        rch_text.Text = metin;
+
+
+                        txt_acıklama.Text = basl[0] + " / " + aramarkamodel(txt_baslik.Text) + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Polen Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
+
+                        lbl_snc.Text = "Polen Filtresi: " + fltrmarka.ToUpper();
+                        lbl_snc.Visible = true;
+                    }
+
+                    // HAVA FİLTRESİ İŞLEMİ
+                    else if (txt_baslik.Text.Contains("Hava"))
+                    {
+
+                        string metin =
+                        "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
+                        "<div>\n" +
+                        "<table style=\"border-collapse: collapse;\">\n" +
+                        "<tbody>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                        "<td>: " + aracmarkamodel + "</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                        "<td>: " + sonyil + "</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                        "<td>: " + " " + motortipi + "</td>\n" +
+                        "</tr>\n" +
+                        "<tr>\n" +
+                        "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                        "<td>:" + " " + kwwhpp + "</td>\n" +
+                        "</tr>\n" +
+                        motoyaz +
+                        "<tr>\n" +
+                        "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                        "<td class=\"\">: " + fltrmarka + "</td>\n" +
+                        "</tr>\n" +
+                        "</tbody>\n" +
+                        "</table>\n" +
+                        "</div>\n" +
+                        "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + aracmarkamodel + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + aracmarkamodel + " " + motortipi + " araçlara uyumlu hava filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                        "<ul>\n" +
+                        "<li>" + markayazısı + "</li>\n" +
+                        "<li>" + aracmarkamodel + " hava filtresi için " + mevcut + "</li>\n" +
+                        "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                        "</ul>\n" +
+                        "<div></div>\n" +
+                        "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Hava Filtresi Ne İşe Yarar ?</span><br />\n" +
+                        "<ul>\n" +
+                        "<li>Yakıtın tepkimeye girebilmesi için gerekli havayı süzer.</li>\n" +
+                        "<li>Dışarıdan aldığı havayı filtreleyerek motor içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
+                        "<li>Yanma odasına temiz hava göndererek yakıtın daha kolay tepkimeye girmesini sağlar.</li>\n" +
+                        "<li>Yakıtın çiğ atılmasını engeller.</li>\n" +
+                        "</ul>\n" +
+                        "<div></div>\n" +
+                        "<div></div>\n" +
+                        "<span style=\"font-weight: bold;\">" + aracmarkamodel + " Hava Filtresi Faydaları</span><br />\n" +
+                        "<ul>\n" +
+                        "<li>Düzenli hava karışımı yakıt tasarrufu sağlar.</li>\n" +
+                        "<li>Motorun daha sessiz ve gürültüsüz çalışmasını sağlar.</li>\n" +
+                        "<li>Araç performansını ve çekişini arttırır.</li>\n" +
+                        "</ul>\n" +
+                        "<div> </div>\n" +
+                        "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        rch_text.Text = metin;
+
+
+
+                        txt_acıklama.Text = basl[0] + " / " + aramarkamodel(txt_baslik.Text) + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Hava Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
+
+
+                        lbl_snc.Text = "Hava Filtresi: " + fltrmarka.ToUpper();
+                        lbl_snc.Visible = true;
+                    }
+
+                    // YAĞ FİLTRESİ İŞLEMİ
+                    else if (txt_baslik.Text.Contains("Yağ"))
+                    {
+
+                        string metin =
                             "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
                             "<div>\n" +
                             "<table style=\"border-collapse: collapse;\">\n" +
                             "<tbody>\n" +
                             "<tr>\n" +
                             "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                            "<td>: " + baslik + "</td>\n" +
+                            "<td>: " + aracmarkamodel + "</td>\n" +
                             "</tr>\n" +
                             "<tr>\n" +
                             "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
@@ -906,261 +1228,122 @@ namespace periyodikbakimci
                             motoyaz +
                             "<tr>\n" +
                             "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                            "<td class=\"\">:" + " " + fltrmarka + "</td>\n" +
+                            "<td class=\"\">: " + fltrmarka + "</td>\n" +
                             "</tr>\n" +
                             "</tbody>\n" +
                             "</table>\n" +
                             "</div>\n" +
-                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + baslik + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + baslik + " " + motortipi + " araçlara uyumlu polen filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                            "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + aracmarkamodel + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + aracmarkamodel + " " + motortipi + " araçlara uyumlu yağ filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
                             "<ul>\n" +
                             "<li>" + markayazısı + "</li>\n" +
-                            "<li>" + baslik + " polen filtresi için " + mevcut + "</li>\n" +
+                            "<li>" + aracmarkamodel + " yağ filtresi için " + mevcut + "</li>\n" +
                             "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
                             "</ul>\n" +
                             "<div></div>\n" +
-                            "<br /><span style=\"font-weight: bold;\">" + baslik + " Polen Filtresi Ne İşe Yarar ?</span><br />\n" +
+                            "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Yağ Filtresi Ne İşe Yarar ?</span><br />\n" +
                             "<ul>\n" +
-                            "<li>Kabin içerisine girecek havayı temizler.</li>\n" +
-                            "<li>Dışarıdan aldığı havayı filtreleyerek araç içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
-                            "<li>Kalorifer ve klima sisteminin daha kuvvetli üflemesini sağlar.</li>\n" +
-                            "<li>Araç içirisinde oluşabilecek tozlanmayı engeller.</li>\n" +
+                            "<li>Otomobil motorları ağırlıklı olarak metal (piston-krank-gömlek vb.) parçalardan oluşur. Hepsi bir biriyle bağlantılı çalıştığı için sürtünme oluşur.</li>\n" +
+                            "<li>Bu sürtünmeyi azaltmak ve en aza indirmek için motor yağı kullanılır. Sürtünme ne olursa olsun devam ettiği için aşınan metal parçalar, demir tozları oluşur.</li>\n" +
+                            "<li>Metal parçaları ve tozları devridaim sırasında yağ filtresinden geçerek  yağın daha temiz motora ulaşmasını sağlar .</li>\n" +
+                            "<li>Yağ filtresini periyodik bakımlarınızda değiştiriniz.</li>\n" +
+                            "<li>Yağ filtrelerinin içerisinde bulunan kağıt Artık yağı süzemeyecek duruma geldiği zaman süzemediği parçacıkları ve demir tozlarını motorun içerisine göndermeye başlayacak ve motor içerisinde bulunan yedek parçaları daha fazla aşındırma yapacaktır.</li>\n" +
                             "</ul>\n" +
                             "<div></div>\n" +
                             "<div></div>\n" +
-                            "<span style=\"font-weight: bold;\">" + baslik + " Polen Filtresi Faydaları</span><br />\n" +
+                            "<span style=\"font-weight: bold;\">" + aracmarkamodel + " Yağ Filtresi Faydaları</span><br />\n" +
                             "<ul>\n" +
-                            "<li>Klima ve kalorifer sisteminin daha temiz ve verimli çalışmasını sağlar.</li>\n" +
-                            "<li>Araç içi temiz havalandırma sağlar.</li>\n" +
-                            "<li>Araç içerisinde oluşabilecek kötü kokuları engeller.</li>\n" +
+                            "<li>Motor aşınmasını en aza indirir</li>\n" +
+                            "<li>Motor içindeki yağın daha temiz dolaşımını sağlar.</li>\n" +
+                            "<li>Motor ömrünü uzatır.</li>\n" +
+                            "<li>Motor performansını artırır.</li>\n" +
+                            "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar. </li>\n" +
                             "</ul>\n" +
                             "<div> </div>\n" +
                             "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
 
-                                rch_text.Text = metin;
+                        rch_text.Text = metin;
+
+                        txt_acıklama.Text = basl[0] + " / " + aramarkamodel(txt_baslik.Text) + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Yağ Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
+
+                        lbl_snc.Text = "Yağ Filtresi: " + fltrmarka.ToUpper();
+                        lbl_snc.Visible = true;
 
 
-                                txt_acıklama.Text = arac + " / " + amodel + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Polen Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
-
-                            }
-
-                            // HAVA FİLTRESİ
-                            else if(cmb_filtre.SelectedIndex == 1)
-                            {
-                                // polen
-
-
-                                // SON YAZDIRMA İŞLEMİ
-
-                                string metin =
-                                "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
-                                "<div>\n" +
-                                "<table style=\"border-collapse: collapse;\">\n" +
-                                "<tbody>\n" +
-                                "<tr>\n" +
-                                "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                                "<td>: " + baslik + "</td>\n" +
-                                "</tr>\n" +
-                                "<tr>\n" +
-                                "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                                "<td>: " + sonyil + "</td>\n" +
-                                "</tr>\n" +
-                                "<tr>\n" +
-                                "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                                "<td>: " + " " + motortipi + "</td>\n" +
-                                "</tr>\n" +
-                                "<tr>\n" +
-                                "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                                "<td>:" + " " + kwwhpp + "</td>\n" +
-                                "</tr>\n" +
-                                motoyaz +
-                                "<tr>\n" +
-                                "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                                "<td class=\"\">: " + fltrmarka + "</td>\n" +
-                                "</tr>\n" +
-                                "</tbody>\n" +
-                                "</table>\n" +
-                                "</div>\n" +
-                                "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + baslik + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + baslik + " " + motortipi + " araçlara uyumlu hava filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
-                                "<ul>\n" +
-                                "<li>" + markayazısı + "</li>\n" +
-                                "<li>" + baslik + " hava filtresi için " + mevcut + "</li>\n" +
-                                "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                                "</ul>\n" +
-                                "<div></div>\n" +
-                                "<br /><span style=\"font-weight: bold;\">" + baslik + " Hava Filtresi Ne İşe Yarar ?</span><br />\n" +
-                                "<ul>\n" +
-                                "<li>Yakıtın tepkimeye girebilmesi için gerekli havayı süzer.</li>\n" +
-                                "<li>Dışarıdan aldığı havayı filtreleyerek motor içerisine daha temiz hava dağıtımını sağlar.</li>\n" +
-                                "<li>Yanma odasına temiz hava göndererek yakıtın daha kolay tepkimeye girmesini sağlar.</li>\n" +
-                                "<li>Yakıtın çiğ atılmasını engeller.</li>\n" +
-                                "</ul>\n" +
-                                "<div></div>\n" +
-                                "<div></div>\n" +
-                                "<span style=\"font-weight: bold;\">" + baslik + " Hava Filtresi Faydaları</span><br />\n" +
-                                "<ul>\n" +
-                                "<li>Düzenli hava karışımı yakıt tasarrufu sağlar.</li>\n" +
-                                "<li>Motorun daha sessiz ve gürültüsüz çalışmasını sağlar.</li>\n" +
-                                "<li>Araç performansını ve çekişini arttırır.</li>\n" +
-                                "</ul>\n" +
-                                "<div> </div>\n" +
-                                "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                                rch_text.Text = metin;
-
-
-
-                                txt_acıklama.Text = arac + " / " + amodel + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Hava Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
-
-                            }
-
-                            // YAĞ FİLTRESİ
-                            else if(cmb_filtre.SelectedIndex == 2)
-                            {
-
-                                string metin =
-                                    "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
-                                    "<div>\n" +
-                                    "<table style=\"border-collapse: collapse;\">\n" +
-                                    "<tbody>\n" +
-                                    "<tr>\n" +
-                                    "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                                    "<td>: " + baslik + "</td>\n" +
-                                    "</tr>\n" +
-                                    "<tr>\n" +
-                                    "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                                    "<td>: " + sonyil + "</td>\n" +
-                                    "</tr>\n" +
-                                    "<tr>\n" +
-                                    "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                                    "<td>:" + " " + motortipi + "</td>\n" +
-                                    "</tr>\n" +
-                                    "<tr>\n" +
-                                    "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                                    "<td>:" + " " + kwwhpp + "</td>\n" +
-                                    "</tr>\n" +
-                                    motoyaz +
-                                    "<tr>\n" +
-                                    "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                                    "<td class=\"\">: " + fltrmarka + "</td>\n" +
-                                    "</tr>\n" +
-                                    "</tbody>\n" +
-                                    "</table>\n" +
-                                    "</div>\n" +
-                                    "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + baslik + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + baslik + " " + motortipi + " araçlara uyumlu yağ filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
-                                    "<ul>\n" +
-                                    "<li>" + markayazısı + "</li>\n" +
-                                    "<li>" + baslik + " yağ filtresi için " + mevcut + "</li>\n" +
-                                    "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                                    "</ul>\n" +
-                                    "<div></div>\n" +
-                                    "<br /><span style=\"font-weight: bold;\">" + baslik + " Yağ Filtresi Ne İşe Yarar ?</span><br />\n" +
-                                    "<ul>\n" +
-                                    "<li>Otomobil motorları ağırlıklı olarak metal (piston-krank-gömlek vb.) parçalardan oluşur. Hepsi bir biriyle bağlantılı çalıştığı için sürtünme oluşur.</li>\n" +
-                                    "<li>Bu sürtünmeyi azaltmak ve en aza indirmek için motor yağı kullanılır. Sürtünme ne olursa olsun devam ettiği için aşınan metal parçalar, demir tozları oluşur.</li>\n" +
-                                    "<li>Metal parçaları ve tozları devridaim sırasında yağ filtresinden geçerek  yağın daha temiz motora ulaşmasını sağlar .</li>\n" +
-                                    "<li>Yağ filtresini periyodik bakımlarınızda değiştiriniz.</li>\n" +
-                                    "<li>Yağ filtrelerinin içerisinde bulunan kağıt Artık yağı süzemeyecek duruma geldiği zaman süzemediği parçacıkları ve demir tozlarını motorun içerisine göndermeye başlayacak ve motor içerisinde bulunan yedek parçaları daha fazla aşındırma yapacaktır.</li>\n" +
-                                    "</ul>\n" +
-                                    "<div></div>\n" +
-                                    "<div></div>\n" +
-                                    "<span style=\"font-weight: bold;\">" + baslik + " Yağ Filtresi Faydaları</span><br />\n" +
-                                    "<ul>\n" +
-                                    "<li>Motor aşınmasını en aza indirir</li>\n" +
-                                    "<li>Motor içindeki yağın daha temiz dolaşımını sağlar.</li>\n" +
-                                    "<li>Motor ömrünü uzatır.</li>\n" +
-                                    "<li>Motor performansını artırır.</li>\n" +
-                                    "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar. </li>\n" +
-                                    "</ul>\n" +
-                                    "<div> </div>\n" +
-                                    "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                               rch_text.Text = metin;
-
-                               txt_acıklama.Text = arac + " / " + amodel + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Yağ Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
-
-                            }
-                            
-                            // YAKIT FİLTRESİ
-                            else if(cmb_filtre.SelectedIndex == 3)
-                            {
-                                string metin =
-                           "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
-                           "<div>\n" +
-                           "<table style=\"border-collapse: collapse;\">\n" +
-                           "<tbody>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
-                           "<td>: " + baslik + "</td>\n" +
-                           "</tr>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
-                           "<td>: " + sonyil + "</td>\n" +
-                           "</tr>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
-                           "<td>:" + " " + motortipi + "</td>\n" +
-                           "</tr>\n" +
-                           "<tr>\n" +
-                           "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
-                           "<td>:" + " " + kwwhpp + "</td>\n" +
-                           "</tr>\n" +
-                           motoyaz +
-                           "<tr>\n" +
-                           "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
-                           "<td class=\"\">: " + fltrmarka + "</td>\n" +
-                           "</tr>\n" +
-                           "</tbody>\n" +
-                           "</table>\n" +
-                           "</div>\n" +
-                           "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + baslik + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + baslik + " " + motortipi + " araçlara uyumlu yakıt filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
-                           "<ul>\n" +
-                           "<li>" + markayazısı + "</li>\n" +
-                           "<li>" + baslik + " yakıt filtresi için " + mevcut + "</li>\n" +
-                           "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
-                           "</ul>\n" +
-                           "<div></div>\n" +
-                           "<br /><span style=\"font-weight: bold;\">" + baslik + " Yakıt Filtresi Ne İşe Yarar ?</span><br />\n" +
-                           "<ul>\n" +
-                           "<li>Zamanla yakıt içerisinde oluşabilecek katı partikülleri süzmeye yarar.</li>\n" +
-                           "<li>Enjeksiyon sistemine temiz yakıt gelmesini sağlar.</li>\n" +
-                           "<li>Araç motorunun daha düzenli çalışmasını sağlar.</li>\n" +
-                           "<li>Yanma odasındaki yakıtın tepkimeye girmesini kolaylaştırır.</li>\n" +
-                           "</ul>\n" +
-                           "<div></div>\n" +
-                           "<div></div>\n" +
-                           "<span style=\"font-weight: bold;\">" + baslik + " Yakıt Filtresi Faydaları</span><br />\n" +
-                           "<ul>\n" +
-                           "<li>Araç çekiş ve performansını arttırır.</li>\n" +
-                           "<li>Yakıt sisteminde bulunan yedek parça ömrünü uzatır.</li>\n" +
-                           "<li>Aracın rolanti dengesini sağlar.</li>\n" +
-                           "<li>Aracın rahat çalışmasını sağlar.</li>\n" +
-                           "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar.</li>\n" +
-                           "</ul>\n" +
-                           "<div> </div>\n" +
-                           "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
-
-                               rch_text.Text = metin;
-
-                                txt_acıklama.Text = arac + " / " + amodel + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Yakıt Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
-
-                            }
-
-
-
-
-                        }
-                        else MessageBox.Show("Filtre Türünü Seçiniz");
                     }
-                    else MessageBox.Show("Motor Tipi Giriniz");
+
+                    // YAKIT FİLTRESİ İŞLEMİ
+                    else if (txt_baslik.Text.Contains("Yakıt"))
+                    {
+                        string metin =
+                   "<h2><span style=\"color: #002892;\">" + anabaslik + "</span></h2>\n" +
+                   "<div>\n" +
+                   "<table style=\"border-collapse: collapse;\">\n" +
+                   "<tbody>\n" +
+                   "<tr>\n" +
+                   "<td><span style=\"font-weight: bold;\">Uyumlu Araç                   </span><span style=\"font-weight: bold;\"><br /></span></td>\n" +
+                   "<td>: " + aracmarkamodel + "</td>\n" +
+                   "</tr>\n" +
+                   "<tr>\n" +
+                   "<td><span style=\"font-weight: bold;\">Uyumlu Modeller     </span></td>\n" +
+                   "<td>: " + sonyil + "</td>\n" +
+                   "</tr>\n" +
+                   "<tr>\n" +
+                   "<td><span style=\"font-weight: bold;\">Motor Tipi <br /></span></td>\n" +
+                   "<td>:" + " " + motortipi + "</td>\n" +
+                   "</tr>\n" +
+                   "<tr>\n" +
+                   "<td><span style=\"font-weight: bold;\">Motor Gücü <br /></span></td>\n" +
+                   "<td>:" + " " + kwwhpp + "</td>\n" +
+                   "</tr>\n" +
+                   motoyaz +
+                   "<tr>\n" +
+                   "<td class=\"\"><span style=\"font-weight: bold;\">Ürün Markası</span></td>\n" +
+                   "<td class=\"\">: " + fltrmarka + "</td>\n" +
+                   "</tr>\n" +
+                   "</tbody>\n" +
+                   "</table>\n" +
+                   "</div>\n" +
+                   "<br /><br /><span style=\"font-size: 10pt;\"><span style=\"font-weight: bold; font-size: 10pt;\">Ürünümüz " + fltrmarka + " marka olup " + aracmarkamodel + " " + motortipi + " motor, " + sonbeygir + " beygir , <span style=\"color: #ff0000;\">" + sonyil + kelimeeki + " </span>üretilen, <span style=\"color: #000000;\">" + aracmarkamodel + " " + motortipi + " araçlara uyumlu yakıt filtresidir. </span></span><span style=\"font-weight: bold;\"><br /></span><br /><br /><span style=\"font-weight: bold;\">Notlar</span><br /></span></span>\n" +
+                   "<ul>\n" +
+                   "<li>" + markayazısı + "</li>\n" +
+                   "<li>" + aracmarkamodel + " yakıt filtresi için " + mevcut + "</li>\n" +
+                   "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                   "</ul>\n" +
+                   "<div></div>\n" +
+                   "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Yakıt Filtresi Ne İşe Yarar ?</span><br />\n" +
+                   "<ul>\n" +
+                   "<li>Zamanla yakıt içerisinde oluşabilecek katı partikülleri süzmeye yarar.</li>\n" +
+                   "<li>Enjeksiyon sistemine temiz yakıt gelmesini sağlar.</li>\n" +
+                   "<li>Araç motorunun daha düzenli çalışmasını sağlar.</li>\n" +
+                   "<li>Yanma odasındaki yakıtın tepkimeye girmesini kolaylaştırır.</li>\n" +
+                   "</ul>\n" +
+                   "<div></div>\n" +
+                   "<div></div>\n" +
+                   "<span style=\"font-weight: bold;\">" + aracmarkamodel + " Yakıt Filtresi Faydaları</span><br />\n" +
+                   "<ul>\n" +
+                   "<li>Araç çekiş ve performansını arttırır.</li>\n" +
+                   "<li>Yakıt sisteminde bulunan yedek parça ömrünü uzatır.</li>\n" +
+                   "<li>Aracın rolanti dengesini sağlar.</li>\n" +
+                   "<li>Aracın rahat çalışmasını sağlar.</li>\n" +
+                   "<li>Aracın gürültüsüz ve sessiz çalışmasını sağlar.</li>\n" +
+                   "</ul>\n" +
+                   "<div> </div>\n" +
+                   "<div style=\"text-align: center;\"><img src=\"/class/INNOVAEditor/assets/logo.png\" alt=\"logo\" style=\"margin: 0px;\" border=\"0\" /> </div>";
+
+                        rch_text.Text = metin;
+
+                        txt_acıklama.Text = basl[0] + " / " + aramarkamodel(txt_baslik.Text) + " / " + motortipi + " / " + sonyil + " / " + kwwhpp + " / " + "Yakıt Filtresi / Çeşitli Marka ve Ödeme Seçenekleri ile Periyodikbakimci.com'da";
+
+
+                        lbl_snc.Text = "Yakıt Filtresi: " + fltrmarka.ToUpper();
+                        lbl_snc.Visible = true;
+                        
+                    }
+
                 }
-                else MessageBox.Show("Araç Model KWHP Ürün Markası Giriniz");
+                else MessageBox.Show("Elinizdeki Mevcut Markaları Giriniz");
             }
             else MessageBox.Show("Araç Başlığı Giriniz");
-
-
-
-
-
         }
 
 
@@ -1173,7 +1356,7 @@ namespace periyodikbakimci
 
         private void PeriyodikCode_Load(object sender, EventArgs e)
         {
-            cmb_filtre.SelectedIndex = 0;
         }
+
     }
 }
