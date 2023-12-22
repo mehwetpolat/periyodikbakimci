@@ -41,11 +41,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txt_mvctmrk = new System.Windows.Forms.TextBox();
             this.lbl_snc = new System.Windows.Forms.Label();
+            this.txt_not = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // rch_text
             // 
-            this.rch_text.Location = new System.Drawing.Point(20, 184);
+            this.rch_text.Location = new System.Drawing.Point(16, 220);
             this.rch_text.Name = "rch_text";
             this.rch_text.ReadOnly = true;
             this.rch_text.Size = new System.Drawing.Size(1190, 343);
@@ -54,7 +56,7 @@
             // 
             // txt_acıklama
             // 
-            this.txt_acıklama.Location = new System.Drawing.Point(20, 564);
+            this.txt_acıklama.Location = new System.Drawing.Point(16, 600);
             this.txt_acıklama.Multiline = true;
             this.txt_acıklama.Name = "txt_acıklama";
             this.txt_acıklama.ReadOnly = true;
@@ -66,7 +68,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.PowderBlue;
             this.label1.Font = new System.Drawing.Font("Unispace", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 540);
+            this.label1.Location = new System.Drawing.Point(16, 576);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 7;
@@ -77,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.PowderBlue;
             this.label2.Font = new System.Drawing.Font("Unispace", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 160);
+            this.label2.Location = new System.Drawing.Point(16, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 8;
@@ -107,7 +109,7 @@
             this.btn_yazdır.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_yazdır.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_yazdır.Font = new System.Drawing.Font("Wide Latin", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_yazdır.Location = new System.Drawing.Point(880, 100);
+            this.btn_yazdır.Location = new System.Drawing.Point(880, 135);
             this.btn_yazdır.Name = "btn_yazdır";
             this.btn_yazdır.Size = new System.Drawing.Size(330, 34);
             this.btn_yazdır.TabIndex = 3;
@@ -162,19 +164,40 @@
             this.lbl_snc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_snc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_snc.ForeColor = System.Drawing.Color.Red;
-            this.lbl_snc.Location = new System.Drawing.Point(879, 140);
+            this.lbl_snc.Location = new System.Drawing.Point(906, 172);
             this.lbl_snc.Name = "lbl_snc";
             this.lbl_snc.Size = new System.Drawing.Size(0, 18);
             this.lbl_snc.TabIndex = 26;
             this.lbl_snc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_snc.Visible = false;
             // 
+            // txt_not
+            // 
+            this.txt_not.Location = new System.Drawing.Point(16, 139);
+            this.txt_not.Multiline = true;
+            this.txt_not.Name = "txt_not";
+            this.txt_not.Size = new System.Drawing.Size(809, 30);
+            this.txt_not.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.PowderBlue;
+            this.label4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(309, 22);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Eklemek Istediginiz Not (varsa) :";
+            // 
             // PeriyodikCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1222, 621);
+            this.ClientSize = new System.Drawing.Size(1262, 657);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_not);
             this.Controls.Add(this.lbl_snc);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txt_mvctmrk);
@@ -211,5 +234,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_mvctmrk;
         private System.Windows.Forms.Label lbl_snc;
+        private System.Windows.Forms.TextBox txt_not;
+        private System.Windows.Forms.Label label4;
     }
 }

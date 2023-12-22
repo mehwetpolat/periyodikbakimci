@@ -262,6 +262,9 @@ namespace periyodikbakimci
 
 
 
+        
+
+
 
         // UYUMLU MODELLER İŞLEMİ İÇİN METOD
         public static string uyumlumodelmetod(string model5)
@@ -296,7 +299,7 @@ namespace periyodikbakimci
                         sonc += a[i];
                     }
 
-                    sonyil = " " + sonc + " Model Yılı Ve Öncesi";
+                    sonyil = sonc + " Model Yılı Ve Öncesi";
 
 
                 }
@@ -309,7 +312,7 @@ namespace periyodikbakimci
                         sonc += a[i];
                     }
 
-                    sonyil = " " + sonc + " Model Yılı Ve Sonrası";
+                    sonyil = sonc + " Model Yılı Ve Sonrası";
                 }
             }
 
@@ -742,6 +745,7 @@ namespace periyodikbakimci
 
 
 
+
         // ARAÇ MODEL AYIKLAMA
         public static string aracmodel(string baslik)
         {
@@ -765,6 +769,20 @@ namespace periyodikbakimci
 
 
 
+
+        // ÜRÜN AÇIKLAMASINA NOT YAZDIRMA METOD
+        public static string noteklemetod(string metin)
+        {
+            string not = "";
+
+            if (metin != "")
+            {
+                not = "<li><strong><span style=\"color: #e03e2d;\">" + metin + "</span></strong></li>";
+            }
+            else not = "";
+
+            return not;
+        }
 
 
 
@@ -1054,7 +1072,12 @@ namespace periyodikbakimci
 
 
 
-                    
+
+                    // not ekleme metod
+                    string notvarsa = noteklemetod(txt_not.Text);
+
+
+
 
 
 
@@ -1102,6 +1125,7 @@ namespace periyodikbakimci
                     "<li>" + markayazısı + "</li>\n" +
                     "<li>" + aracmarkamodel + " polen filtresi için " + mevcut + "</li>\n" +
                     "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                    notvarsa +
                     "</ul>\n" +
                     "<div></div>\n" +
                     "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Polen Filtresi Ne İşe Yarar ?</span><br />\n" +
@@ -1169,6 +1193,7 @@ namespace periyodikbakimci
                         "<li>" + markayazısı + "</li>\n" +
                         "<li>" + aracmarkamodel + " hava filtresi için " + mevcut + "</li>\n" +
                         "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                        notvarsa +
                         "</ul>\n" +
                         "<div></div>\n" +
                         "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Hava Filtresi Ne İşe Yarar ?</span><br />\n" +
@@ -1238,6 +1263,7 @@ namespace periyodikbakimci
                             "<li>" + markayazısı + "</li>\n" +
                             "<li>" + aracmarkamodel + " yağ filtresi için " + mevcut + "</li>\n" +
                             "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                            notvarsa +
                             "</ul>\n" +
                             "<div></div>\n" +
                             "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Yağ Filtresi Ne İşe Yarar ?</span><br />\n" +
@@ -1308,6 +1334,7 @@ namespace periyodikbakimci
                    "<li>" + markayazısı + "</li>\n" +
                    "<li>" + aracmarkamodel + " yakıt filtresi için " + mevcut + "</li>\n" +
                    "<li>Sipariş verdikten sonra müşteri temsilcimiz doğru ürünlerin teyidi için sizinle irtibata geçecektir.</li>\n" +
+                   notvarsa +
                    "</ul>\n" +
                    "<div></div>\n" +
                    "<br /><span style=\"font-weight: bold;\">" + aracmarkamodel + " Yakıt Filtresi Ne İşe Yarar ?</span><br />\n" +
