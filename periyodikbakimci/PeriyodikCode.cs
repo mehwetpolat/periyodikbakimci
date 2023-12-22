@@ -775,7 +775,7 @@ namespace periyodikbakimci
         {
             string not = "";
 
-            if (metin != "")
+            if (metin != "" && metin.Length > 5)
             {
                 not = "<li><strong><span style=\"color: #e03e2d;\">" + metin + "</span></strong></li>";
             }

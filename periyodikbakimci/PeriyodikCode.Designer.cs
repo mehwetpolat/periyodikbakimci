@@ -109,7 +109,7 @@
             this.btn_yazdır.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btn_yazdır.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_yazdır.Font = new System.Drawing.Font("Wide Latin", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_yazdır.Location = new System.Drawing.Point(880, 135);
+            this.btn_yazdır.Location = new System.Drawing.Point(880, 139);
             this.btn_yazdır.Name = "btn_yazdır";
             this.btn_yazdır.Size = new System.Drawing.Size(330, 34);
             this.btn_yazdır.TabIndex = 3;
@@ -164,7 +164,7 @@
             this.lbl_snc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_snc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_snc.ForeColor = System.Drawing.Color.Red;
-            this.lbl_snc.Location = new System.Drawing.Point(906, 172);
+            this.lbl_snc.Location = new System.Drawing.Point(882, 176);
             this.lbl_snc.Name = "lbl_snc";
             this.lbl_snc.Size = new System.Drawing.Size(0, 18);
             this.lbl_snc.TabIndex = 26;
@@ -195,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1262, 657);
+            this.ClientSize = new System.Drawing.Size(1223, 657);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_not);
             this.Controls.Add(this.lbl_snc);
